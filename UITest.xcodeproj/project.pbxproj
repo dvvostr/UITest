@@ -37,8 +37,6 @@
 		DF76BD2B27E87591002D154F /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD2927E87591002D154F /* ProfileDetailViewController.swift */; };
 		DF76BD2C27E87591002D154F /* ProfileDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD2A27E87591002D154F /* ProfileDetailViewController.xib */; };
 		DF76BD3427E87721002D154F /* UX3CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD3327E87721002D154F /* UX3CustomInput.swift */; };
-		DF76BD3627E87830002D154F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD3527E87830002D154F /* README.md */; };
-		DF76BD3827E8870F002D154F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD3727E8870F002D154F /* README.md */; };
 		DFA8232F27E86DCB005302F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8232E27E86DCB005302F3 /* AppDelegate.swift */; };
 		DFA8233127E86DCB005302F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8233027E86DCB005302F3 /* SceneDelegate.swift */; };
 		DFA8233627E86DCB005302F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA8233427E86DCB005302F3 /* Main.storyboard */; };
@@ -446,7 +444,6 @@
 				DFA823F227E87012005302F3 /* HomeControllerTableViewCell.xib in Resources */,
 				DFA823F527E87012005302F3 /* HomeViewController.xib in Resources */,
 				DF76BCFB27E8742B002D154F /* NotoSans-MediumItalic.ttf in Resources */,
-				DF76BD3827E8870F002D154F /* README.md in Resources */,
 				DF76BD2527E87587002D154F /* ExampleViewController3.xib in Resources */,
 				DF76BD1D27E87587002D154F /* ExampleViewController1.xib in Resources */,
 				DF76BCFE27E8742B002D154F /* NotoSans-SemiBold.ttf in Resources */,
@@ -455,7 +452,6 @@
 				DF76BD2327E87587002D154F /* ExampleViewController4.xib in Resources */,
 				DF76BCFF27E8742B002D154F /* NotoSans-SemiBoldItalic.ttf in Resources */,
 				DF76BD2C27E87591002D154F /* ProfileDetailViewController.xib in Resources */,
-				DF76BD3627E87830002D154F /* README.md in Resources */,
 				DF76BD1F27E87587002D154F /* ExampleViewController2.xib in Resources */,
 				DFA8233B27E86DCB005302F3 /* LaunchScreen.storyboard in Resources */,
 				DF76BD0127E8742B002D154F /* NotoSans-Light.ttf in Resources */,
@@ -646,7 +642,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6UW82UTYA7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UITest/Info/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -675,7 +671,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6UW82UTYA7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UITest/Info/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
