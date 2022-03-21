@@ -1,7 +1,7 @@
 Home controller
 ======
 List of samples
----
+***
 <hr/>
 <p style="height:1px;"></p>
 #hr
