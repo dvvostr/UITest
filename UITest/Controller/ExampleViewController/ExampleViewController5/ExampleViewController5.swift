@@ -39,6 +39,8 @@ class ExampleViewController5: UIX3CustomViewController {
                 configuration.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 36, bottom: 12, trailing: 36)
             }
             button?.configuration = configuration
+        } else {
+            button?.contentEdgeInsets = UIEdgeInsets(top: 12, left: 36, bottom: 12, right: 36)
         }
         button?.normalBackgroundColor = Config.Colors.tint
         button?.normalForegroundColor = Config.Colors.background
