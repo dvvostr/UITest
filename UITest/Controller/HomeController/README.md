@@ -8,10 +8,10 @@
   <meta name="generator" content="">
   <title></title>
   <link rel="canonical" href="/">
-  <link href="/assets/css/style.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+  <link href="https://dvostr.ru/assets/css/style.css" rel="stylesheet" integrity="" crossorigin="anonymous">
 </head>
 <body>
-<h2>Home controller</h2>
+<h2 class="mb-4">Home controller</h2>
 <div><img src="https://dvostr.ru/assets/img/image_homeController.png" width="360"/></div>
 </body>
 </html>
