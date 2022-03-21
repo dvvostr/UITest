@@ -24,9 +24,21 @@
 		DF76BD0A27E874E0002D154F /* x3UI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0527E874E0002D154F /* x3UI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DF76BD0B27E874E0002D154F /* x3Core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0627E874E0002D154F /* x3Core.xcframework */; };
 		DF76BD0C27E874E0002D154F /* x3Core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0627E874E0002D154F /* x3Core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF76BD1D27E87587002D154F /* ExampleViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD0F27E87587002D154F /* ExampleViewController1.xib */; };
+		DF76BD1E27E87587002D154F /* ExampleViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD1027E87587002D154F /* ExampleViewController1.swift */; };
+		DF76BD1F27E87587002D154F /* ExampleViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD1227E87587002D154F /* ExampleViewController2.xib */; };
+		DF76BD2027E87587002D154F /* ExampleViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD1327E87587002D154F /* ExampleViewController2.swift */; };
+		DF76BD2127E87587002D154F /* ExampleViewController5.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD1527E87587002D154F /* ExampleViewController5.xib */; };
+		DF76BD2227E87587002D154F /* ExampleViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD1627E87587002D154F /* ExampleViewController5.swift */; };
+		DF76BD2327E87587002D154F /* ExampleViewController4.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD1827E87587002D154F /* ExampleViewController4.xib */; };
+		DF76BD2427E87587002D154F /* ExampleViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD1927E87587002D154F /* ExampleViewController4.swift */; };
+		DF76BD2527E87587002D154F /* ExampleViewController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD1B27E87587002D154F /* ExampleViewController3.xib */; };
+		DF76BD2627E87587002D154F /* ExampleViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD1C27E87587002D154F /* ExampleViewController3.swift */; };
+		DF76BD2B27E87591002D154F /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD2927E87591002D154F /* ProfileDetailViewController.swift */; };
+		DF76BD2C27E87591002D154F /* ProfileDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76BD2A27E87591002D154F /* ProfileDetailViewController.xib */; };
+		DF76BD3427E87721002D154F /* UX3CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76BD3327E87721002D154F /* UX3CustomInput.swift */; };
 		DFA8232F27E86DCB005302F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8232E27E86DCB005302F3 /* AppDelegate.swift */; };
 		DFA8233127E86DCB005302F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8233027E86DCB005302F3 /* SceneDelegate.swift */; };
-		DFA8233327E86DCB005302F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8233227E86DCB005302F3 /* ViewController.swift */; };
 		DFA8233627E86DCB005302F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA8233427E86DCB005302F3 /* Main.storyboard */; };
 		DFA8233827E86DCB005302F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA8233727E86DCB005302F3 /* Assets.xcassets */; };
 		DFA8233B27E86DCB005302F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA8233927E86DCB005302F3 /* LaunchScreen.storyboard */; };
@@ -71,10 +83,22 @@
 		DF76BD0427E874E0002D154F /* x3CustomUI1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = x3CustomUI1.xcframework; path = UITest/Frameworks/x3CustomUI1.xcframework; sourceTree = "<group>"; };
 		DF76BD0527E874E0002D154F /* x3UI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = x3UI.xcframework; path = UITest/Frameworks/x3UI.xcframework; sourceTree = "<group>"; };
 		DF76BD0627E874E0002D154F /* x3Core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = x3Core.xcframework; path = UITest/Frameworks/x3Core.xcframework; sourceTree = "<group>"; };
+		DF76BD0F27E87587002D154F /* ExampleViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController1.xib; sourceTree = "<group>"; };
+		DF76BD1027E87587002D154F /* ExampleViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController1.swift; sourceTree = "<group>"; };
+		DF76BD1227E87587002D154F /* ExampleViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController2.xib; sourceTree = "<group>"; };
+		DF76BD1327E87587002D154F /* ExampleViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController2.swift; sourceTree = "<group>"; };
+		DF76BD1527E87587002D154F /* ExampleViewController5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController5.xib; sourceTree = "<group>"; };
+		DF76BD1627E87587002D154F /* ExampleViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController5.swift; sourceTree = "<group>"; };
+		DF76BD1827E87587002D154F /* ExampleViewController4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController4.xib; sourceTree = "<group>"; };
+		DF76BD1927E87587002D154F /* ExampleViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController4.swift; sourceTree = "<group>"; };
+		DF76BD1B27E87587002D154F /* ExampleViewController3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController3.xib; sourceTree = "<group>"; };
+		DF76BD1C27E87587002D154F /* ExampleViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController3.swift; sourceTree = "<group>"; };
+		DF76BD2927E87591002D154F /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		DF76BD2A27E87591002D154F /* ProfileDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileDetailViewController.xib; sourceTree = "<group>"; };
+		DF76BD3327E87721002D154F /* UX3CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UX3CustomInput.swift; sourceTree = "<group>"; };
 		DFA8232B27E86DCB005302F3 /* UITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA8232E27E86DCB005302F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFA8233027E86DCB005302F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFA8233227E86DCB005302F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DFA8233527E86DCB005302F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFA8233727E86DCB005302F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFA8233A27E86DCB005302F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,6 +144,103 @@
 				DF76BCF827E8742B002D154F /* NotoSans-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DF76BD0D27E87587002D154F /* ExampleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD0E27E87587002D154F /* ExampleViewController1 */,
+				DF76BD1127E87587002D154F /* ExampleViewController2 */,
+				DF76BD1A27E87587002D154F /* ExampleViewController3 */,
+				DF76BD1727E87587002D154F /* ExampleViewController4 */,
+				DF76BD1427E87587002D154F /* ExampleViewController5 */,
+			);
+			path = ExampleViewController;
+			sourceTree = "<group>";
+		};
+		DF76BD0E27E87587002D154F /* ExampleViewController1 */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD0F27E87587002D154F /* ExampleViewController1.xib */,
+				DF76BD1027E87587002D154F /* ExampleViewController1.swift */,
+			);
+			path = ExampleViewController1;
+			sourceTree = "<group>";
+		};
+		DF76BD1127E87587002D154F /* ExampleViewController2 */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD1227E87587002D154F /* ExampleViewController2.xib */,
+				DF76BD1327E87587002D154F /* ExampleViewController2.swift */,
+			);
+			path = ExampleViewController2;
+			sourceTree = "<group>";
+		};
+		DF76BD1427E87587002D154F /* ExampleViewController5 */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD1527E87587002D154F /* ExampleViewController5.xib */,
+				DF76BD1627E87587002D154F /* ExampleViewController5.swift */,
+			);
+			path = ExampleViewController5;
+			sourceTree = "<group>";
+		};
+		DF76BD1727E87587002D154F /* ExampleViewController4 */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD1827E87587002D154F /* ExampleViewController4.xib */,
+				DF76BD1927E87587002D154F /* ExampleViewController4.swift */,
+			);
+			path = ExampleViewController4;
+			sourceTree = "<group>";
+		};
+		DF76BD1A27E87587002D154F /* ExampleViewController3 */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD1B27E87587002D154F /* ExampleViewController3.xib */,
+				DF76BD1C27E87587002D154F /* ExampleViewController3.swift */,
+			);
+			path = ExampleViewController3;
+			sourceTree = "<group>";
+		};
+		DF76BD2727E87591002D154F /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD2827E87591002D154F /* ProfileDetailViewController */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		DF76BD2827E87591002D154F /* ProfileDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD2927E87591002D154F /* ProfileDetailViewController.swift */,
+				DF76BD2A27E87591002D154F /* ProfileDetailViewController.xib */,
+			);
+			path = ProfileDetailViewController;
+			sourceTree = "<group>";
+		};
+		DF76BD3027E876F4002D154F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		DF76BD3127E87705002D154F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD3227E8770E002D154F /* Control */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF76BD3227E8770E002D154F /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				DF76BD3327E87721002D154F /* UX3CustomInput.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 		DFA8232227E86DCB005302F3 = {
@@ -183,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				DFA823E927E86F8E005302F3 /* Classes */,
+				DF76BD3027E876F4002D154F /* Controls */,
+				DF76BD3127E87705002D154F /* View */,
 				DFA8232E27E86DCB005302F3 /* AppDelegate.swift */,
 				DFA8233027E86DCB005302F3 /* SceneDelegate.swift */,
 				DFA8240127E8708D005302F3 /* Config.swift */,
@@ -194,7 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				DFA823EC27E86FD4005302F3 /* HomeController */,
-				DFA8233227E86DCB005302F3 /* ViewController.swift */,
+				DF76BD0D27E87587002D154F /* ExampleViewController */,
+				DF76BD2727E87591002D154F /* Security */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,13 +436,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF76BD2127E87587002D154F /* ExampleViewController5.xib in Resources */,
 				DFA823F227E87012005302F3 /* HomeControllerTableViewCell.xib in Resources */,
 				DFA823F527E87012005302F3 /* HomeViewController.xib in Resources */,
 				DF76BCFB27E8742B002D154F /* NotoSans-MediumItalic.ttf in Resources */,
+				DF76BD2527E87587002D154F /* ExampleViewController3.xib in Resources */,
+				DF76BD1D27E87587002D154F /* ExampleViewController1.xib in Resources */,
 				DF76BCFE27E8742B002D154F /* NotoSans-SemiBold.ttf in Resources */,
 				DFA8239B27E86F04005302F3 /* obama.png in Resources */,
 				DF76BCFC27E8742B002D154F /* NotoSans-Black.ttf in Resources */,
+				DF76BD2327E87587002D154F /* ExampleViewController4.xib in Resources */,
 				DF76BCFF27E8742B002D154F /* NotoSans-SemiBoldItalic.ttf in Resources */,
+				DF76BD2C27E87591002D154F /* ProfileDetailViewController.xib in Resources */,
+				DF76BD1F27E87587002D154F /* ExampleViewController2.xib in Resources */,
 				DFA8233B27E86DCB005302F3 /* LaunchScreen.storyboard in Resources */,
 				DF76BD0127E8742B002D154F /* NotoSans-Light.ttf in Resources */,
 				DF76BCF927E8742B002D154F /* NotoSans-Regular.ttf in Resources */,
@@ -340,13 +470,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFA8233327E86DCB005302F3 /* ViewController.swift in Sources */,
 				DFA823F327E87012005302F3 /* HomeControllerTableViewCell.swift in Sources */,
 				DFA823EB27E86F9A005302F3 /* UICustomResponder.swift in Sources */,
+				DF76BD3427E87721002D154F /* UX3CustomInput.swift in Sources */,
+				DF76BD1E27E87587002D154F /* ExampleViewController1.swift in Sources */,
+				DF76BD2B27E87591002D154F /* ProfileDetailViewController.swift in Sources */,
 				DFA8240227E8708D005302F3 /* Config.swift in Sources */,
+				DF76BD2227E87587002D154F /* ExampleViewController5.swift in Sources */,
 				DFA8232F27E86DCB005302F3 /* AppDelegate.swift in Sources */,
 				DFA8233127E86DCB005302F3 /* SceneDelegate.swift in Sources */,
 				DFA823F427E87012005302F3 /* HomeViewController.swift in Sources */,
+				DF76BD2627E87587002D154F /* ExampleViewController3.swift in Sources */,
+				DF76BD2027E87587002D154F /* ExampleViewController2.swift in Sources */,
+				DF76BD2427E87587002D154F /* ExampleViewController4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

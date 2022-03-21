@@ -66,15 +66,15 @@ extension HomeViewController: UICustomHomeControllerTableCellDelegate {
         var _class: UIX3CustomViewController.Type? = nil, _obj: UIX3CustomViewController?
         guard let _cell = sender as? HomeControllerTableViewCell else { return }
         switch _cell.item?.index ?? -1 {
-//        case 1: _class = ExampleViewController1.self
-//        case 2: _class = ExampleViewController2.self
-//        case 3: _class = ExampleViewController3.self
-//        case 4: _class = ExampleViewController4.self
-//        case 5: _class = ExampleViewController5.self
+        case 1: _class = ExampleViewController1.self
+        case 2: _class = ExampleViewController2.self
+        case 3: _class = ExampleViewController3.self
+        case 4: _class = ExampleViewController4.self
+        case 5: _class = ExampleViewController5.self
         case 6: break
         case 7: break
         case 8: break
-//        case 9: _class = ProfileDetailViewController.self
+        case 9: _class = ProfileDetailViewController.self
         default: self.showAlert(title: "Error", message: "Unknown action type", buttonTitle: "OK")
         }
         guard let _class = _class else { return }
