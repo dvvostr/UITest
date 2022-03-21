@@ -1,5 +1,7 @@
-<h2 class="mb-4">Home controller</h2>
-<p>List of samples</p>
+Home controller
+======
+List of samples
+---
 <hr/>
 <p style="height:1px;"></p>
 #hr
