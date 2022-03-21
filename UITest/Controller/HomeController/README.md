@@ -2,7 +2,7 @@ Home controller
 ======
 List of samples
 -
-![alt text](https://dvostr.ru/assets/img/image_homeController.png "Logo Title Text 1")
+![alt text](https://dvostr.ru/assets/img/image_homeController.png "Logo Title Text 1" | width=360)
 <div><img src="https://dvostr.ru/assets/img/image_homeController.png" width="360"/></div>
 
 
