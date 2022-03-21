@@ -1,6 +1,6 @@
 Home controller
 ======
-List of samples
+<pre>List of samples</pre>
 -
 <div><img src="https://dvostr.ru/assets/img/image_homeController.png" width="360"/></div>
 
