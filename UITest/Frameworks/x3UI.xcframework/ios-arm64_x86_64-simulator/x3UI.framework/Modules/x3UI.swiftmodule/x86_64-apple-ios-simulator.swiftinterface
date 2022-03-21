@@ -1,0 +1,1224 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name x3UI
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import x3Core
+@_exported import x3UI
+extension Swift.String {
+  public func widthOfString(usingFont font: UIKit.UIFont) -> CoreGraphics.CGFloat
+  public func heightOfString(usingFont font: UIKit.UIFont) -> CoreGraphics.CGFloat
+  public func sizeOfString(usingFont font: UIKit.UIFont) -> CoreGraphics.CGSize
+}
+public enum VerticalLocation : Swift.String {
+  case bottom
+  case top
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class UIViewBorder : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public class func fromNib<T>() -> T where T : UIKit.UIView
+  @_Concurrency.MainActor(unsafe) public func addConstraintsWithFormat(_ format: Swift.String, views: UIKit.UIView...)
+  @_Concurrency.MainActor(unsafe) public func fillSuperview()
+  @_Concurrency.MainActor(unsafe) public func anchor(_ top: UIKit.NSLayoutYAxisAnchor? = nil, left: UIKit.NSLayoutXAxisAnchor? = nil, bottom: UIKit.NSLayoutYAxisAnchor? = nil, right: UIKit.NSLayoutXAxisAnchor? = nil, topConstant: CoreGraphics.CGFloat = 0, leftConstant: CoreGraphics.CGFloat = 0, bottomConstant: CoreGraphics.CGFloat = 0, rightConstant: CoreGraphics.CGFloat = 0, widthConstant: CoreGraphics.CGFloat = 0, heightConstant: CoreGraphics.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func anchorWithReturnAnchors(_ top: UIKit.NSLayoutYAxisAnchor? = nil, left: UIKit.NSLayoutXAxisAnchor? = nil, bottom: UIKit.NSLayoutYAxisAnchor? = nil, right: UIKit.NSLayoutXAxisAnchor? = nil, topConstant: CoreGraphics.CGFloat = 0, leftConstant: CoreGraphics.CGFloat = 0, bottomConstant: CoreGraphics.CGFloat = 0, rightConstant: CoreGraphics.CGFloat = 0, widthConstant: CoreGraphics.CGFloat = 0, heightConstant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint]
+  @_Concurrency.MainActor(unsafe) public func anchorCenterXToSuperview(constant: CoreGraphics.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func anchorCenterYToSuperview(constant: CoreGraphics.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func anchorCenterSuperview()
+  @_Concurrency.MainActor(unsafe) public func addShadow(location: x3UI.VerticalLocation, color: UIKit.UIColor = .black, opacity: Swift.Float = 0.5, radius: CoreGraphics.CGFloat = 5.0, height: CoreGraphics.CGFloat = 7)
+  @_Concurrency.MainActor(unsafe) public func anchorSize(widthConstant: CoreGraphics.CGFloat, heightConstant: CoreGraphics.CGFloat) -> [UIKit.NSLayoutConstraint]
+  @_Concurrency.MainActor(unsafe) public var firstResponder: UIKit.UIView? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func addShadow(offset: CoreGraphics.CGSize, color: UIKit.UIColor = .black, opacity: Swift.Float = 0.5, radius: CoreGraphics.CGFloat = 5.0)
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func addBordersColored(edges: UIKit.UIRectEdge, inset: CoreGraphics.CGFloat = 0.0, thickness: CoreGraphics.CGFloat = 1.0, alpha: CoreGraphics.CGFloat = 1.0) -> [UIKit.UIView]
+  @_Concurrency.MainActor(unsafe) public func removeBorders()
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func addBorders(edges: UIKit.UIRectEdge, color: UIKit.UIColor, inset: CoreGraphics.CGFloat = 0.0, thickness: CoreGraphics.CGFloat = 1.0, alpha: CoreGraphics.CGFloat = 1.0) -> [UIKit.UIView]
+  @_Concurrency.MainActor(unsafe) public func setCornerBorder(color: UIKit.UIColor? = nil, cornerRadius: CoreGraphics.CGFloat = 15.0, borderWidth: CoreGraphics.CGFloat = 1.5)
+  @_Concurrency.MainActor(unsafe) public func setRoundCorners(corners: UIKit.UIRectCorner, radius: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func setAsShadow(bounds: CoreGraphics.CGRect, cornerRadius: CoreGraphics.CGFloat = 0.0, shadowRadius: CoreGraphics.CGFloat = 1, color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func getContraint(attribute: UIKit.NSLayoutConstraint.Attribute?, relation: UIKit.NSLayoutConstraint.Relation?) -> UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor(unsafe) public func getContraints(attribute: UIKit.NSLayoutConstraint.Attribute?, relation: UIKit.NSLayoutConstraint.Relation?) -> [UIKit.NSLayoutConstraint]
+}
+extension UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var parentViewController: UIKit.UIViewController? {
+    @objc get
+  }
+}
+@objc public protocol UIX3ToolTipDelegate {
+  @objc func toolTipViewDidAppear(for identifier: Swift.String)
+  @objc func toolTipViewDidDisappear(for identifier: Swift.String, with timeInterval: Foundation.TimeInterval)
+}
+@_inheritsConvenienceInitializers @objc public class ToolTipPreferences : ObjectiveC.NSObject {
+  @_inheritsConvenienceInitializers @objc public class Drawing : ObjectiveC.NSObject {
+    @_inheritsConvenienceInitializers @objc public class Arrow : ObjectiveC.NSObject {
+      @objc public var size: CoreGraphics.CGSize
+      @objc public var tipCornerRadius: CoreGraphics.CGFloat
+      @objc override dynamic public init()
+      @objc deinit
+    }
+    @_inheritsConvenienceInitializers @objc public class Bubble : ObjectiveC.NSObject {
+      @_inheritsConvenienceInitializers @objc public class Border : ObjectiveC.NSObject {
+        @objc public var color: UIKit.UIColor?
+        @objc public var width: CoreGraphics.CGFloat
+        @objc override dynamic public init()
+        @objc deinit
+      }
+      @objc public var inset: CoreGraphics.CGFloat
+      @objc public var spacing: CoreGraphics.CGFloat
+      @objc public var cornerRadius: CoreGraphics.CGFloat
+      @objc public var maxWidth: CoreGraphics.CGFloat
+      @objc public var color: UIKit.UIColor {
+        @objc get
+        @objc set
+      }
+      @objc public var gradientLocations: [CoreGraphics.CGFloat]
+      @objc public var gradientColors: [UIKit.UIColor]
+      @objc public var border: x3UI.ToolTipPreferences.Drawing.Bubble.Border
+      @objc override dynamic public init()
+      @objc deinit
+    }
+    @_inheritsConvenienceInitializers @objc public class Title : ObjectiveC.NSObject {
+      @objc public var font: UIKit.UIFont
+      @objc public var color: UIKit.UIColor
+      @objc override dynamic public init()
+      @objc deinit
+    }
+    @_inheritsConvenienceInitializers @objc public class Message : ObjectiveC.NSObject {
+      @objc public var font: UIKit.UIFont
+      @objc public var color: UIKit.UIColor
+      @objc override dynamic public init()
+      @objc deinit
+    }
+    @_inheritsConvenienceInitializers @objc public class Button : ObjectiveC.NSObject {
+      @objc public var font: UIKit.UIFont
+      @objc public var color: UIKit.UIColor
+      @objc override dynamic public init()
+      @objc deinit
+    }
+    @_inheritsConvenienceInitializers @objc public class Background : ObjectiveC.NSObject {
+      @objc public var color: UIKit.UIColor {
+        @objc get
+        @objc set
+      }
+      @objc override dynamic public init()
+      @objc deinit
+    }
+    @objc public var arrow: x3UI.ToolTipPreferences.Drawing.Arrow
+    @objc public var bubble: x3UI.ToolTipPreferences.Drawing.Bubble
+    @objc public var title: x3UI.ToolTipPreferences.Drawing.Title
+    @objc public var message: x3UI.ToolTipPreferences.Drawing.Message
+    @objc public var button: x3UI.ToolTipPreferences.Drawing.Button
+    @objc public var background: x3UI.ToolTipPreferences.Drawing.Background
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc public class Animating : ObjectiveC.NSObject {
+    @objc public var dismissTransform: CoreGraphics.CGAffineTransform
+    @objc public var showInitialTransform: CoreGraphics.CGAffineTransform
+    @objc public var showFinalTransform: CoreGraphics.CGAffineTransform
+    @objc public var springDamping: CoreGraphics.CGFloat
+    @objc public var springVelocity: CoreGraphics.CGFloat
+    @objc public var showInitialAlpha: CoreGraphics.CGFloat
+    @objc public var dismissFinalAlpha: CoreGraphics.CGFloat
+    @objc public var showDuration: Swift.Double
+    @objc public var dismissDuration: Swift.Double
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc public var drawing: x3UI.ToolTipPreferences.Drawing
+  @objc public var animating: x3UI.ToolTipPreferences.Animating
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class UIX3ToolTip : UIKit.UIView {
+  @objc public enum ArrowPosition : Swift.Int {
+    case top, right, bottom, left
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func draw(_ rect: CoreGraphics.CGRect)
+  @objc deinit
+}
+extension UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func showToolTip(identifier: Swift.String, title: Swift.String? = nil, message: Swift.String, button: Swift.String? = nil, arrowPosition: x3UI.UIX3ToolTip.ArrowPosition, preferences: x3UI.ToolTipPreferences = ToolTipPreferences(), delegate: x3UI.UIX3ToolTipDelegate? = nil)
+}
+extension UIKit.UIBarItem {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func showToolTip(identifier: Swift.String, title: Swift.String? = nil, message: Swift.String, button: Swift.String? = nil, arrowPosition: x3UI.UIX3ToolTip.ArrowPosition, preferences: x3UI.ToolTipPreferences = ToolTipPreferences(), delegate: x3UI.UIX3ToolTipDelegate? = nil)
+}
+extension UIKit.NSLayoutAnchor {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func constraint(equalTo anchor: UIKit.NSLayoutAnchor<AnchorType>, constant c: CoreGraphics.CGFloat, isActive: Swift.Bool) -> UIKit.NSLayoutConstraint
+}
+public enum UX3TextControlButtonType {
+  case none, button, icon, clear
+  public static func == (a: x3UI.UX3TextControlButtonType, b: x3UI.UX3TextControlButtonType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol UX3TextControlDelegate {
+  @objc optional func UX3TextControlTextChange(_ sender: Any?)
+  @objc optional func UX3TextControlRightButtonClick(_ sender: Any?)
+  @objc optional func UX3TextControlLeftButtonClick(_ sender: Any?)
+}
+extension UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open class func fromNib() -> Self
+}
+extension UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func showAlert(title: Swift.String = "Error", message: Swift.String = "", buttonTitle: Swift.String = "OK", handler: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func showYesNoAlert(title: Swift.String = "", message: Swift.String = "", yesTitle: Swift.String = "Yes", noTitle: Swift.String = "No", yesHandler: ((UIKit.UIAlertAction) -> Swift.Void)? = nil, noHandler: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func showAlertWithTextField(title: Swift.String, message: Swift.String, textFieldConfiguration: ((UIKit.UITextField) -> Swift.Void)? = nil, confirmButtonTitle: Swift.String = "ОК", handler: @escaping (UIKit.UIAlertController?) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func showPopover(_ viewController: UIKit.UIViewController, sourceRect: CoreGraphics.CGRect, with size: CoreGraphics.CGSize, direction: UIKit.UIPopoverArrowDirection = .up)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func showPopover(_ viewController: UIKit.UIViewController, barButton: UIKit.UIBarButtonItem, with size: CoreGraphics.CGSize, direction: UIKit.UIPopoverArrowDirection = .up)
+  @_Concurrency.MainActor(unsafe) public func isModal() -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3TextField : UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @_Concurrency.MainActor(unsafe) open var textControlDelegate: x3UI.UX3TextControlDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var textColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var font: UIKit.UIFont? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var placeholder: Swift.String? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var placeholderFont: UIKit.UIFont? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var leftButtonType: x3UI.UX3TextControlButtonType
+  @_Concurrency.MainActor(unsafe) open var leftButtonViewMode: UIKit.UITextField.ViewMode {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var leftButtonImage: UIKit.UIImage? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var leftButtonSize: CoreGraphics.CGSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var leftButtonImageOffset: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var leftButtonLeftOffset: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var textEdgeInsets: UIKit.UIEdgeInsets? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var rightButtonType: x3UI.UX3TextControlButtonType
+  @_Concurrency.MainActor(unsafe) open var rightButtonViewMode: UIKit.UITextField.ViewMode {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var rightButtonImage: UIKit.UIImage? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var rightButtonSize: CoreGraphics.CGSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var rightButtonImageOffset: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var rightButtonRightOffset: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var maxLength: Swift.Int {
+    get
+    set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open func textFieldDidChange()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func placeholderRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func rightViewRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func leftViewRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func drawText(in rect: CoreGraphics.CGRect)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class UIX3SegmentControl : UIKit.UISegmentedControl {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var backgroundColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var foregroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var font: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(items: [Any]?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3CustomView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+extension UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) public class var identifier: Swift.String {
+    get
+  }
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) open class var topViewController: UIKit.UIViewController? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open class var statusBar: UIKit.UIView? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open class var keyWindow: UIKit.UIWindow? {
+    get
+  }
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) open var statusBarUIView: UIKit.UIView? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static var orientation: UIKit.UIInterfaceOrientation {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static var firstWindow: UIKit.UIWindow? {
+    get
+  }
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) open func setImage(_ image: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) open func setTitle(_ text: Swift.String?)
+}
+public enum UX3CustomButtonImagePosition {
+  case normal, right, left, largeBtn
+  public static func == (a: x3UI.UX3CustomButtonImagePosition, b: x3UI.UX3CustomButtonImagePosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct UX3CustomButtonSettings {
+  public struct Color {
+    public var background: UIKit.UIColor
+    public var foreground: UIKit.UIColor
+    public var border: UIKit.UIColor
+    public init(background: UIKit.UIColor, foreground: UIKit.UIColor, border: UIKit.UIColor)
+  }
+  public var normalColor: x3UI.UX3CustomButtonSettings.Color
+  public var selectedColor: x3UI.UX3CustomButtonSettings.Color
+  public var font: UIKit.UIFont
+  public var imageOffset: CoreGraphics.CGFloat
+  public var largeImageOffset: CoreGraphics.CGFloat
+  public var borderWidth: CoreGraphics.CGFloat
+  public var borderRadius: CoreGraphics.CGFloat
+  public var caption: Swift.String?
+  public var image: UIKit.UIImage?
+  public init(normalColor: x3UI.UX3CustomButtonSettings.Color, selectedColor: x3UI.UX3CustomButtonSettings.Color, font: UIKit.UIFont = UIFont.systemFont(ofSize: 16), caption: Swift.String? = nil, imageOffset: CoreGraphics.CGFloat = 10, largeImageOffset: CoreGraphics.CGFloat = 4, borderWidth: CoreGraphics.CGFloat = 1.0, borderRadius: CoreGraphics.CGFloat = 0.0)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UX3CustomButton : UIKit.UIButton {
+  public struct Defaults {
+    public struct Color {
+      public struct Normal {
+        public static var background: UIKit.UIColor
+        public static var foreground: UIKit.UIColor
+        public static var border: UIKit.UIColor
+      }
+      public struct Selected {
+        public static var background: UIKit.UIColor
+        public static var foreground: UIKit.UIColor
+        public static var border: UIKit.UIColor
+      }
+    }
+    public static var titleFont: UIKit.UIFont
+    public static var imageOffset: CoreGraphics.CGFloat
+    public static var largeImageOffset: CoreGraphics.CGFloat
+    public static var borderWidth: CoreGraphics.CGFloat
+    public static var borderRadius: CoreGraphics.CGFloat
+    public static var settings: x3UI.UX3CustomButtonSettings {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func invalidate()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func imageRect(forContentRect contentRect: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var normalBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var normalForegroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var normalBorderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedBackgroundColor: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedForegroundColor: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedBorderColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderWidth: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var font: UIKit.UIFont? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var imagePosition: x3UI.UX3CustomButtonImagePosition {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var imageOffset: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = ToastManager.shared.duration, position: x3UI.ToastPosition = ToastManager.shared.position, title: Swift.String? = nil, image: UIKit.UIImage? = nil, style: x3UI.ToastStyle = ToastManager.shared.style, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = ToastManager.shared.duration, point: CoreGraphics.CGPoint, title: Swift.String?, image: UIKit.UIImage?, style: x3UI.ToastStyle = ToastManager.shared.style, completion: ((_ didTap: Swift.Bool) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = ToastManager.shared.duration, position: x3UI.ToastPosition = ToastManager.shared.position, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = ToastManager.shared.duration, point: CoreGraphics.CGPoint, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func hideToast()
+  @_Concurrency.MainActor(unsafe) public func hideToast(_ toast: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func hideAllToasts(includeActivity: Swift.Bool = false, clearQueue: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func clearToastQueue()
+  @_Concurrency.MainActor(unsafe) public func makeToastActivity(_ position: x3UI.ToastPosition)
+  @_Concurrency.MainActor(unsafe) public func makeToastActivity(_ point: CoreGraphics.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func hideToastActivity()
+  @_Concurrency.MainActor(unsafe) public func toastViewForMessage(_ message: Swift.String?, title: Swift.String?, image: UIKit.UIImage?, style: x3UI.ToastStyle) throws -> UIKit.UIView
+}
+public struct ToastStyle {
+  public init()
+  public var backgroundColor: UIKit.UIColor
+  public var titleColor: UIKit.UIColor
+  public var messageColor: UIKit.UIColor
+  public var maxWidthPercentage: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var maxHeightPercentage: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  public var horizontalPadding: CoreGraphics.CGFloat
+  public var verticalPadding: CoreGraphics.CGFloat
+  public var cornerRadius: CoreGraphics.CGFloat
+  public var titleFont: UIKit.UIFont
+  public var messageFont: UIKit.UIFont
+  public var titleAlignment: UIKit.NSTextAlignment
+  public var messageAlignment: UIKit.NSTextAlignment
+  public var titleNumberOfLines: Swift.Int
+  public var messageNumberOfLines: Swift.Int
+  public var displayShadow: Swift.Bool
+  public var shadowColor: UIKit.UIColor
+  public var shadowOpacity: Swift.Float {
+    get
+    set
+  }
+  public var shadowRadius: CoreGraphics.CGFloat
+  public var shadowOffset: CoreGraphics.CGSize
+  public var imageSize: CoreGraphics.CGSize
+  public var activitySize: CoreGraphics.CGSize
+  public var fadeDuration: Swift.Double
+  public var activityIndicatorColor: UIKit.UIColor
+  public var activityBackgroundColor: UIKit.UIColor
+}
+@_hasMissingDesignatedInitializers public class ToastManager {
+  public static let shared: x3UI.ToastManager
+  public var style: x3UI.ToastStyle
+  public var isTapToDismissEnabled: Swift.Bool
+  public var isQueueEnabled: Swift.Bool
+  public var duration: Swift.Double
+  public var position: x3UI.ToastPosition
+  @objc deinit
+}
+public enum ToastPosition {
+  case top, center, bottom
+  public static func == (a: x3UI.ToastPosition, b: x3UI.ToastPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UX3RoundedButton : UIKit.UIButton {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var normalColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+extension UIKit.UIImage {
+  public var withRenderingModeTemplate: UIKit.UIImage {
+    get
+  }
+  public var withRenderingOriginal: UIKit.UIImage {
+    get
+  }
+  convenience public init?(color: UIKit.UIColor, size: CoreGraphics.CGSize = CGSize(width: 1, height: 1))
+  convenience public init?(sourceNamed: Swift.String, bgColor: UIKit.UIColor, size: CoreGraphics.CGFloat, bgAlpha: CoreGraphics.CGFloat, imgAlpha: CoreGraphics.CGFloat, insetDimen: CoreGraphics.CGFloat = 0)
+  convenience public init?(sourceNamed: Swift.String, size: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat, insetDimen: CoreGraphics.CGFloat = 0)
+  convenience public init?(url: Foundation.URL)
+  convenience public init?(base64: Swift.String?)
+  public func asBase64String() -> Swift.String?
+  public func resizedImage(newSize: CoreGraphics.CGSize) -> UIKit.UIImage
+  public func resizedImageWithinRect(rectSize: CoreGraphics.CGSize) -> UIKit.UIImage
+  public func withRoundedCorners(radius: CoreGraphics.CGFloat? = nil) -> UIKit.UIImage?
+  public func alpha(_ value: CoreGraphics.CGFloat) -> UIKit.UIImage
+  public static func colored(color: UIKit.UIColor) -> UIKit.UIImage
+  public func colored(_ color: UIKit.UIColor?) -> UIKit.UIImage?
+  public func drawOnImage(startingImage: UIKit.UIImage) -> UIKit.UIImage
+  public func withInsets(insetDimen: CoreGraphics.CGFloat) -> UIKit.UIImage
+  public func withInset(insets: UIKit.UIEdgeInsets) -> UIKit.UIImage
+  public class func withSolidColor(_ color: UIKit.UIColor?, size: CoreGraphics.CGSize) -> UIKit.UIImage
+  public class func fromScreen() -> UIKit.UIImage
+}
+extension UIKit.UISegmentedControl {
+  @_Concurrency.MainActor(unsafe) public func fixBackgroundSegmentControl()
+}
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor(unsafe) public func setProperty(width: CoreGraphics.CGFloat) -> UIKit.UIBarButtonItem
+}
+@_hasMissingDesignatedInitializers open class UIX3CustomControl {
+  public struct Defaults {
+    public struct Color {
+      public static var background: UIKit.UIColor?
+      public static var foreground: UIKit.UIColor?
+      public static var border: UIKit.UIColor?
+      public static var tint: UIKit.UIColor?
+      public static var text: UIKit.UIColor?
+    }
+    public static var cornerRadius: CoreGraphics.CGFloat
+    public static var borderWidth: CoreGraphics.CGFloat
+    public static var textFont: UIKit.UIFont
+    public static var inputFont: UIKit.UIFont
+    public static var titleFont: UIKit.UIFont
+    public static var smallFont: UIKit.UIFont
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UX3SliderIndicatorControl : UIKit.UIControl {
+  @_Concurrency.MainActor(unsafe) public var delegate: x3UI.ControlEventDelegate?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var animationDuration: CoreGraphics.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var thumbViewAlpha: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var segmentColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var thumbColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var segmentSelectedColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var selectedSegmentIndex: Swift.Int {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var controlRoundValue: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var thumbViewHidden: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var buttonSpacing: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public func setSegmentedWith<T>(items: T)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension x3UI.UX3SliderIndicatorControl {
+  @_Concurrency.MainActor(unsafe) public func setSelectedSegmentIndex(index: Swift.Int, animated: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class UIBaseNavigationTitleLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class UIBaseNavigationTitleView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class UIBaseNavigationBarButtonItem : UIKit.UIBarButtonItem {
+  @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol UIX3CustomViewControllerDelegate {
+  @objc optional func customViewController(sender: x3UI.UIX3CustomViewController)
+  @objc optional func customViewController(willSetupFor sender: x3UI.UIX3CustomViewController)
+  @objc optional func customViewController(titleFor sender: x3UI.UIX3CustomViewController) -> Swift.String
+  @objc optional func customViewController(sender: x3UI.UIX3CustomViewController, keyboardRect: Any?, duration: Swift.Double, options: Any?)
+  @objc optional func customViewController(sender: x3UI.UIX3CustomViewController, keyboardTopPosition: CoreGraphics.CGFloat, duration: Swift.Double, options: Any?)
+  @objc optional func customViewController(sender: x3UI.UIX3CustomViewController, statusBarStyle: UIKit.UIStatusBarStyle)
+  @objc optional func customViewController(sender: x3UI.UIX3CustomViewController, orientation: UIKit.UIDeviceOrientation, isLandscape: Swift.Bool)
+}
+@_inheritsConvenienceInitializers @IBDesignable @objc @_Concurrency.MainActor(unsafe) open class UIX3CustomViewController : UIKit.UIViewController {
+  public struct Defaults {
+    public struct Color {
+    }
+    public static var navigationBackSize: CoreGraphics.CGFloat
+    public static var navigationBackImage: UIKit.UIImage?
+    public static var navigationBackOffset: UIKit.UIEdgeInsets
+    public static var titleFont: UIKit.UIFont
+  }
+  @_Concurrency.MainActor(unsafe) public var addToNavigation: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var customDelegate: x3UI.UIX3CustomViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var id: Swift.String
+  @_Concurrency.MainActor(unsafe) public var ownerId: Swift.String?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var backgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var captionFont: UIKit.UIFont {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var titleView: UIKit.UIView? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var captionText: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var captionAttributedText: Foundation.NSAttributedString? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var navBackImage: UIKit.UIImage? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var keyboardIsHidden: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var rootViewController: UIKit.UIViewController? {
+    get
+  }
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) open class func create<T>(caption: Swift.String?) -> T where T : x3UI.UIX3CustomViewController
+  @_Concurrency.MainActor(unsafe) open class var nibExists: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open class func createNavigation<T>(_ type: T.Type, caption: Swift.String?) -> UIKit.UINavigationController where T : x3UI.UIX3CustomViewController
+  @_Concurrency.MainActor(unsafe) open class func createNavigationFromNib<T>(_ type: T.Type, caption: Swift.String?, navBackImage: UIKit.UIImage? = nil) -> UIKit.UINavigationController where T : x3UI.UIX3CustomViewController
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) open func initialize()
+  @_Concurrency.MainActor(unsafe) open func filallize()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @_Concurrency.MainActor(unsafe) open func ColorSchemeChange()
+  @_Concurrency.MainActor(unsafe) open func navigationBack()
+  @_Concurrency.MainActor(unsafe) open func reset()
+  @_Concurrency.MainActor(unsafe) open func reload()
+  @_Concurrency.MainActor(unsafe) open func internalReloadData()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func deviceRotateEvent(orientation: UIKit.UIDeviceOrientation, isLandscape: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func keyboardEvent(duration: Swift.Double, options: UIKit.UIView.AnimationOptions, rect: CoreGraphics.CGRect?)
+  @_Concurrency.MainActor(unsafe) open func keyboardEvent(duration: Swift.Double, options: UIKit.UIView.AnimationOptions, bottomPosition: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) open func keyboardStateChange(isHidden: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func load(params: Any? = nil, completion: @escaping x3Core.OnDataResult)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3CaptionView : x3UI.UIX3CustomView {
+  public struct Defaults {
+    public struct Color {
+    }
+    public static var captionInsets: UIKit.UIEdgeInsets
+    public static var viewInsets: UIKit.UIEdgeInsets
+  }
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) override open func setupView()
+  @_Concurrency.MainActor(unsafe) override open func invalidate()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func setupObservers()
+  @_Concurrency.MainActor(unsafe) open var view: x3UI.UIX3CustomView? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var captionLabel: UIKit.UILabel {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var caption: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var font: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var captionInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var viewInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension x3UI.UIX3CaptionView : UIKit.UITextViewDelegate {
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static var currentOrientation: UIKit.UIDeviceOrientation {
+    get
+  }
+}
+@objc public protocol ControlEventDelegate {
+  @objc optional func controlEvent(_ sender: Any?, event: Any?)
+}
+public typealias OnControlEvent = (x3UI.ControlEvent, Any?) -> (Swift.Void)
+public typealias OnQueryControlEvent = (Any?) -> (x3UI.ControlEvent)
+public typealias OnControlEventEscaping = (Any?, @escaping x3UI.OnQueryControlEvent) -> (Swift.Void)
+public typealias ControlEventEnumiratedString = (Swift.Int, Swift.String?)
+@objc public enum ControlEventDataType : Swift.Int {
+  case none = -1, bool = 1, int = 2, string = 3, enumiratedString = 4, object = 21
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ControlEvent {
+  case none, bool(Swift.Bool?), int(Swift.Int?), string(Swift.String?), enumiratedString(Swift.Int, Swift.String?), object(Any?)
+  public var type: x3UI.ControlEventDataType {
+    get
+  }
+  public var value: (x3UI.ControlEventDataType, Any?)? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3CaptionTextField : x3UI.UIX3TextField {
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) override open func setupView()
+  @_Concurrency.MainActor(unsafe) open func setupObservers()
+  @_Concurrency.MainActor(unsafe) override open func invalidate()
+  @_Concurrency.MainActor(unsafe) open var caption: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var placeholder: Swift.String? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) override open var placeholderFont: UIKit.UIFont? {
+    @_Concurrency.MainActor(unsafe) get
+    @_Concurrency.MainActor(unsafe) set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func placeholderRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3CustomBorderView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3CustomBorderedView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderWidth: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class UIX3XibView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var contentView: UIKit.UIView! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) open class func loadFromNib<T>() -> T where T : UIKit.UIView
+  @_Concurrency.MainActor(unsafe) open class func create<T>(type: T.Type) -> T where T : UIKit.UIView
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class XibView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum UIX3AlertButton : Swift.CaseIterable {
+  case ok, cancel, help
+  public static func == (a: x3UI.UIX3AlertButton, b: x3UI.UIX3AlertButton) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [x3UI.UIX3AlertButton]
+  public static var allCases: [x3UI.UIX3AlertButton] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum UIX3AlertViewSize {
+  case fixed, percent
+  public static func == (a: x3UI.UIX3AlertViewSize, b: x3UI.UIX3AlertViewSize) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum UIX3AlertButtonType : Swift.Int {
+  case none
+  case ok
+  case cancel
+  case help
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct UIX3AlertButtonOptions : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let ok: x3UI.UIX3AlertButtonOptions
+  public static let cancel: x3UI.UIX3AlertButtonOptions
+  public static let help: x3UI.UIX3AlertButtonOptions
+  public static let `default`: x3UI.UIX3AlertButtonOptions
+  public static let all: x3UI.UIX3AlertButtonOptions
+  public var count: Swift.Int {
+    get
+  }
+  public typealias ArrayLiteralElement = x3UI.UIX3AlertButtonOptions
+  public typealias Element = x3UI.UIX3AlertButtonOptions
+  public typealias RawValue = Swift.Int
+}
+@objc public protocol UIX3AlertViewControllerDelegate {
+  @objc optional func alertView(sender: x3UI.UIX3AlertViewController, buttonType: Swift.Int, buttonCreate: x3UI.UX3CustomButton?)
+  @objc optional func alertView(sender: x3UI.UIX3AlertViewController, buttonType: Swift.Int, buttonClick: x3UI.UX3CustomButton?)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3AlertViewController : UIKit.UIViewController {
+  public struct Defaults {
+    public struct AlertView {
+      public static var buttonOKSettings: x3UI.UX3CustomButtonSettings?
+      public static var buttonCancelSettings: x3UI.UX3CustomButtonSettings?
+      public static var buttonHelpSettings: x3UI.UX3CustomButtonSettings?
+      public struct Color {
+        public static var background: UIKit.UIColor?
+        public static var message: UIKit.UIColor?
+        public static var caption: UIKit.UIColor?
+      }
+      public struct Buttons {
+        public static var spacing: CoreGraphics.CGFloat
+        public static var height: CoreGraphics.CGFloat
+      }
+      public static var height: CoreGraphics.CGFloat
+      public static var width: CoreGraphics.CGFloat
+      public static var padding: CoreGraphics.CGFloat
+      public static var imageSize: CoreGraphics.CGFloat
+      public static var headerFont: UIKit.UIFont?
+      public static var messageFont: UIKit.UIFont?
+    }
+    public struct Color {
+      public static var background: UIKit.UIColor?
+    }
+    public static var duration: CoreGraphics.CGFloat
+    public static var showAnimation: Swift.Int
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) open var alertViewDelegate: x3UI.UIX3AlertViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) open var onOKButtonClick: x3Core.NotifyEvent?
+  @_Concurrency.MainActor(unsafe) open var onCancelButtonClick: x3Core.NotifyEvent?
+  @_Concurrency.MainActor(unsafe) open var onHelpButtonClick: x3Core.NotifyEvent?
+  @_Concurrency.MainActor(unsafe) open var image: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) open var caption: Swift.String?
+  @_Concurrency.MainActor(unsafe) open var message: Swift.String?
+  @_Concurrency.MainActor(unsafe) open var buttonOptions: x3UI.UIX3AlertButtonOptions {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var headerFont: UIKit.UIFont?
+  @_Concurrency.MainActor(unsafe) open var messageFont: UIKit.UIFont?
+  @_Concurrency.MainActor(unsafe) open var messageAttributedString: Foundation.NSAttributedString?
+  @_Concurrency.MainActor(unsafe) open var borderWidth: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) open var alertWidth: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var alertSize: x3UI.UIX3AlertViewSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var buttonOKSettings: x3UI.UX3CustomButtonSettings? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var buttonCancelSettings: x3UI.UX3CustomButtonSettings? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var buttonHelpSettings: x3UI.UX3CustomButtonSettings? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var buttonOKHelper: x3Core.ObjectEvent?
+  @_Concurrency.MainActor(unsafe) open var buttonCancelHelper: x3Core.ObjectEvent?
+  @_Concurrency.MainActor(unsafe) open var buttonHelpHelper: x3Core.ObjectEvent? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open func show()
+  @_Concurrency.MainActor(unsafe) open func hide()
+  @objc @_Concurrency.MainActor(unsafe) open func dismissAlertView()
+  @_Concurrency.MainActor(unsafe) open func showWithDuration(_ duration: Swift.Double)
+  @_Concurrency.MainActor(unsafe) open func dismissWithDuration(_ duration: Swift.Double)
+}
+public func ShowAlertView(_ caption: Swift.String? = nil, message: Swift.String, image: UIKit.UIImage? = nil, buttons: x3UI.UIX3AlertButtonOptions = .default) -> x3UI.UIX3AlertViewController
+public func ShowAlertView(_ caption: Swift.String? = nil, text: Foundation.NSAttributedString, image: UIKit.UIImage? = nil)
+public enum UITableViewScrollDirection {
+  case none
+  case scrollDown
+  case scrollUp
+  case scrollLock
+  public static func == (a: x3UI.UITableViewScrollDirection, b: x3UI.UITableViewScrollDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) public var sortedVisibleIndexPath: [Foundation.IndexPath]? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var firstVisible: Foundation.IndexPath? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var nextFirstVisible: Foundation.IndexPath? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var lastVisible: Foundation.IndexPath? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var preLastVisible: Foundation.IndexPath? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static func compareIndexPath(item1: Foundation.IndexPath?, item2: Foundation.IndexPath?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func registerNib<T>(_: T.Type, bundle: Foundation.Bundle? = nil) where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func registerClass<T>(_: T.Type) where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableCellForIndexPath<T>(_ indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func registerNibForHeaderFooterView<T>(_: T.Type, bundle: Foundation.Bundle? = nil) where T : UIKit.UITableViewHeaderFooterView
+  @_Concurrency.MainActor(unsafe) public func registerClassForHeaderFooterView<T>(_: T.Type) where T : UIKit.UITableViewHeaderFooterView
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableHeaderFooterView<T>(_: T.Type) -> T? where T : UIKit.UITableViewHeaderFooterView
+  @_Concurrency.MainActor(unsafe) public func resizeScrollToIndexPath(indexPath: Foundation.IndexPath, at scrollPosition: UIKit.UITableView.ScrollPosition, animated: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func totalRows() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func indexPathToIndex(value indexPath: Foundation.IndexPath) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func scroll(to: x3UI.UITableViewScrollDirection, animated: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class UIX3MultilineTextField : UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer? = nil)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var text: Swift.String! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var attributedText: Foundation.NSAttributedString! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var placeholder: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var placeholderColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var placeholderAlignment: UIKit.NSTextAlignment {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isPlaceholderScrollEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var leftViewOrigin: CoreGraphics.CGPoint {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var leftImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var leftView: UIKit.UIView? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+}
+extension UIKit.UIColor {
+  public static func rgb(red: CoreGraphics.CGFloat, green: CoreGraphics.CGFloat, blue: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat = 1) -> UIKit.UIColor
+  public func getAlphaColor(_ alpha: CoreGraphics.CGFloat) -> UIKit.UIColor
+  public static func fromHex(rgbValue: Swift.UInt32, alpha: Swift.Double = 1.0) -> UIKit.UIColor
+  public func invert(by percentage: CoreGraphics.CGFloat = 30.0) -> UIKit.UIColor?
+  public func oposite() -> UIKit.UIColor?
+  public func adjust(by percentage: CoreGraphics.CGFloat = 30.0) -> UIKit.UIColor?
+  public func lighter(by percentage: CoreGraphics.CGFloat = 30.0) -> UIKit.UIColor?
+  public func darker(by percentage: CoreGraphics.CGFloat = 30.0) -> UIKit.UIColor?
+  open func RGBtoCMYK(r: CoreGraphics.CGFloat, g: CoreGraphics.CGFloat, b: CoreGraphics.CGFloat) -> (c: CoreGraphics.CGFloat, m: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat, k: CoreGraphics.CGFloat)
+}
+extension UIKit.UIColor {
+  public var suiColor: SwiftUI.Color {
+    get
+  }
+}
+extension UIKit.UIColor {
+  public var HEX: Swift.String {
+    get
+  }
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public var defaultFont: UIKit.UIFont? {
+    get
+    set
+  }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class UIX3TextView : x3UI.UIX3CustomView, UIKit.UITextViewDelegate {
+  public struct Defaults {
+    public struct Color {
+    }
+    public static var textInsets: UIKit.UIEdgeInsets
+    public static var buttonSize: CoreGraphics.CGSize
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) override open func setupView()
+  @_Concurrency.MainActor(unsafe) open func setupObservers()
+  @_Concurrency.MainActor(unsafe) override open func invalidate()
+  @_Concurrency.MainActor(unsafe) open var textControlDelegate: x3UI.UX3TextControlDelegate?
+  @_Concurrency.MainActor(unsafe) public var textInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var textColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var placeholderTextColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var font: UIKit.UIFont? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var placeholderFont: UIKit.UIFont? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var leftButtonType: x3UI.UX3TextControlButtonType {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftButtonImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var leftButtonSize: CoreGraphics.CGSize {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftButtonImageOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftButtonLeftOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var rightButtonType: x3UI.UX3TextControlButtonType {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var rightButtonImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var rightButtonSize: CoreGraphics.CGSize {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var rightButtonImageOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var rightButtonRightOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholder: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderWidth: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func textViewDidChange(_ textView: UIKit.UITextView)
+}
+extension x3UI.VerticalLocation : Swift.Equatable {}
+extension x3UI.VerticalLocation : Swift.Hashable {}
+extension x3UI.VerticalLocation : Swift.RawRepresentable {}
+extension x3UI.UIX3ToolTip.ArrowPosition : Swift.Equatable {}
+extension x3UI.UIX3ToolTip.ArrowPosition : Swift.Hashable {}
+extension x3UI.UIX3ToolTip.ArrowPosition : Swift.RawRepresentable {}
+extension x3UI.UX3TextControlButtonType : Swift.Equatable {}
+extension x3UI.UX3TextControlButtonType : Swift.Hashable {}
+extension x3UI.UX3CustomButtonImagePosition : Swift.Equatable {}
+extension x3UI.UX3CustomButtonImagePosition : Swift.Hashable {}
+extension x3UI.ToastPosition : Swift.Equatable {}
+extension x3UI.ToastPosition : Swift.Hashable {}
+extension x3UI.ControlEventDataType : Swift.Equatable {}
+extension x3UI.ControlEventDataType : Swift.Hashable {}
+extension x3UI.ControlEventDataType : Swift.RawRepresentable {}
+extension x3UI.UIX3AlertButton : Swift.Equatable {}
+extension x3UI.UIX3AlertButton : Swift.Hashable {}
+extension x3UI.UIX3AlertViewSize : Swift.Equatable {}
+extension x3UI.UIX3AlertViewSize : Swift.Hashable {}
+extension x3UI.UIX3AlertButtonType : Swift.Equatable {}
+extension x3UI.UIX3AlertButtonType : Swift.Hashable {}
+extension x3UI.UIX3AlertButtonType : Swift.RawRepresentable {}
+extension x3UI.UITableViewScrollDirection : Swift.Equatable {}
+extension x3UI.UITableViewScrollDirection : Swift.Hashable {}

@@ -1,0 +1,11 @@
+framework module x3CustomUI1 {
+  umbrella header "x3CustomUI1.h"
+
+  export *
+  module * { export * }
+}
+
+module x3CustomUI1.Swift {
+    header "x3CustomUI1-Swift.h"
+    requires objc
+}

@@ -1,0 +1,318 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name x3CustomUI1
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+@_exported import x3CustomUI1
+import x3UI
+public enum UIX3CustomCheckboxLabelViewState {
+  case unassigned, checked, unchecked
+  public static func == (a: x3CustomUI1.UIX3CustomCheckboxLabelViewState, b: x3CustomUI1.UIX3CustomCheckboxLabelViewState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @IBDesignable @objc @_Concurrency.MainActor(unsafe) public class UIX3CustomCheckboxLabelView : x3UI.UIX3XibView {
+  public struct Defaults {
+    public struct Color {
+      public static var unset: UIKit.UIColor?
+      public static var controlBackground: UIKit.UIColor?
+    }
+    public static var font: UIKit.UIFont
+    public static var verticalOffset: CoreGraphics.CGFloat
+    public static var horizontalOffset: CoreGraphics.CGFloat
+    public static var labelSpacing: CoreGraphics.CGFloat
+    public static var cornerRadius: CoreGraphics.CGFloat
+    public static var imageInset: CoreGraphics.CGFloat
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var verticalOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var horizontalOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var labelSpacing: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var imageInset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var backgroundColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var controlBackgroundColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var image: UIKit.UIImage? {
+    get
+    set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var unsetColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var textColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var font: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var value: x3CustomUI1.UIX3CustomCheckboxLabelViewState {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var delegate: x3UI.ControlEventDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) override open func setupView()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class UIX3CustomNavigaionButton : UIKit.UIButton {
+  public struct Defaults {
+    public struct Color {
+      public static var background: UIKit.UIColor
+    }
+    public static var portraitSize: CoreGraphics.CGFloat
+    public static var landscapeSize: CoreGraphics.CGFloat
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) convenience public init(image: UIKit.UIImage)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class UIX3CustomNavigaionImageView : UIKit.UIImageView {
+  public struct Defaults {
+    public struct Color {
+      public static var background: UIKit.UIColor
+    }
+    public static var portraitSize: CoreGraphics.CGFloat
+    public static var landscapeSize: CoreGraphics.CGFloat
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(image: UIKit.UIImage?)
+  @objc deinit
+}
+public typealias SegmentedControlItems = [Swift.String]
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class UIX3CustomSegmentControl : x3UI.UIX3XibView {
+  public struct Defaults {
+    public struct Color {
+      public static var inactive: UIKit.UIColor?
+    }
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var verticalOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var horizontalOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var items: x3CustomUI1.SegmentedControlItems {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var delegate: x3UI.ControlEventDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) override open func setupView()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @IBDesignable @objc @_Concurrency.MainActor(unsafe) public class UIX3CustomUpDownControl : x3UI.UIX3XibView {
+  public struct Defaults {
+    public struct Color {
+      public static var editBackground: UIKit.UIColor?
+    }
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic public var tintColor: UIKit.UIColor! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var height: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedColor: UIKit.UIColor! {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var fontColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var font: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var editBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var backgroundColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var delegate: x3UI.ControlEventDelegate?
+  @_Concurrency.MainActor(unsafe) public var isEditing: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var value: Swift.Int {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var minValue: Swift.Int {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var maxValue: Swift.Int {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override open func setupView()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension x3CustomUI1.UIX3CustomUpDownControl : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @IBDesignable @objc @_Concurrency.MainActor(unsafe) public class UIX3CustomButtonView : UIKit.UIView {
+  public struct Defaults {
+    public struct Color {
+      public static var background: UIKit.UIColor?
+      public struct Normal {
+        public static var background: UIKit.UIColor?
+        public static var foreground: UIKit.UIColor?
+        public static var border: UIKit.UIColor?
+      }
+      public struct Selected {
+        public static var background: UIKit.UIColor?
+        public static var foreground: UIKit.UIColor?
+        public static var border: UIKit.UIColor?
+      }
+    }
+    public static var cornerRadius: CoreGraphics.CGFloat
+    public static var borderWidth: CoreGraphics.CGFloat
+    public static var titleFont: UIKit.UIFont
+    public static var imageOffset: CoreGraphics.CGFloat
+    public static var verticalOffset: CoreGraphics.CGFloat
+    public static var horizontalOffset: CoreGraphics.CGFloat
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) open func setupView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func invalidate()
+  @_Concurrency.MainActor(unsafe) public var delegate: x3UI.ControlEventDelegate?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var verticalOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var horizontalOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var imagePosition: x3UI.UX3CustomButtonImagePosition {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var imageOffset: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var backgroundColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var normalBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var normalForegroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var normalBorderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedForegroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var selectedBorderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderWidth: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var font: UIKit.UIFont? {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+extension x3CustomUI1.UIX3CustomCheckboxLabelViewState : Swift.Equatable {}
+extension x3CustomUI1.UIX3CustomCheckboxLabelViewState : Swift.Hashable {}

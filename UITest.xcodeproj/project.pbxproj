@@ -18,6 +18,12 @@
 		DF76BD0127E8742B002D154F /* NotoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF76BCF627E8742B002D154F /* NotoSans-Light.ttf */; };
 		DF76BD0227E8742B002D154F /* NotoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF76BCF727E8742B002D154F /* NotoSans-BlackItalic.ttf */; };
 		DF76BD0327E8742B002D154F /* NotoSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF76BCF827E8742B002D154F /* NotoSans-ThinItalic.ttf */; };
+		DF76BD0727E874E0002D154F /* x3CustomUI1.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0427E874E0002D154F /* x3CustomUI1.xcframework */; };
+		DF76BD0827E874E0002D154F /* x3CustomUI1.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0427E874E0002D154F /* x3CustomUI1.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF76BD0927E874E0002D154F /* x3UI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0527E874E0002D154F /* x3UI.xcframework */; };
+		DF76BD0A27E874E0002D154F /* x3UI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0527E874E0002D154F /* x3UI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF76BD0B27E874E0002D154F /* x3Core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0627E874E0002D154F /* x3Core.xcframework */; };
+		DF76BD0C27E874E0002D154F /* x3Core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF76BD0627E874E0002D154F /* x3Core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DFA8232F27E86DCB005302F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8232E27E86DCB005302F3 /* AppDelegate.swift */; };
 		DFA8233127E86DCB005302F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8233027E86DCB005302F3 /* SceneDelegate.swift */; };
 		DFA8233327E86DCB005302F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8233227E86DCB005302F3 /* ViewController.swift */; };
@@ -41,6 +47,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DF76BD0A27E874E0002D154F /* x3UI.xcframework in Embed Frameworks */,
+				DF76BD0C27E874E0002D154F /* x3Core.xcframework in Embed Frameworks */,
+				DF76BD0827E874E0002D154F /* x3CustomUI1.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +68,9 @@
 		DF76BCF627E8742B002D154F /* NotoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Light.ttf"; sourceTree = "<group>"; };
 		DF76BCF727E8742B002D154F /* NotoSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
 		DF76BCF827E8742B002D154F /* NotoSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		DF76BD0427E874E0002D154F /* x3CustomUI1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = x3CustomUI1.xcframework; path = UITest/Frameworks/x3CustomUI1.xcframework; sourceTree = "<group>"; };
+		DF76BD0527E874E0002D154F /* x3UI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = x3UI.xcframework; path = UITest/Frameworks/x3UI.xcframework; sourceTree = "<group>"; };
+		DF76BD0627E874E0002D154F /* x3Core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = x3Core.xcframework; path = UITest/Frameworks/x3Core.xcframework; sourceTree = "<group>"; };
 		DFA8232B27E86DCB005302F3 /* UITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA8232E27E86DCB005302F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFA8233027E86DCB005302F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF76BD0927E874E0002D154F /* x3UI.xcframework in Frameworks */,
+				DF76BD0B27E874E0002D154F /* x3Core.xcframework in Frameworks */,
+				DF76BD0727E874E0002D154F /* x3CustomUI1.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +245,9 @@
 		DFA823F627E8706D005302F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF76BD0627E874E0002D154F /* x3Core.xcframework */,
+				DF76BD0427E874E0002D154F /* x3CustomUI1.xcframework */,
+				DF76BD0527E874E0002D154F /* x3UI.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

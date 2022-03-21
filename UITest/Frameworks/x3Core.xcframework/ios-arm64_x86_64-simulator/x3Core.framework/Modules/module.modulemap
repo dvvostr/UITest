@@ -1,0 +1,11 @@
+framework module x3Core {
+  umbrella header "x3Core.h"
+
+  export *
+  module * { export * }
+}
+
+module x3Core.Swift {
+    header "x3Core-Swift.h"
+    requires objc
+}

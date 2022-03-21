@@ -1,0 +1,298 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name x3Core
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+@_exported import x3Core
+@objc public protocol CustomDelegate {
+  @objc optional func event()
+  @objc optional func event(object: Any?)
+  @objc optional func event(object: Any?, event: x3Core.NotifyEvent?)
+  @objc optional func event(error: Foundation.NSError, code: Swift.Int, msg: Swift.String)
+  @objc optional func event(boolValue: Swift.Bool)
+  @objc optional func event(stringValue: Swift.String)
+  @objc optional func event(intValue: Swift.Int)
+  @objc optional func event(boolValue: Swift.Bool, stringValue: Swift.String)
+}
+public typealias NotifyEvent = () -> (Swift.Void)
+public typealias ObjectEvent = (Any?) -> (Swift.Void)
+public typealias ObjectCallbackEvent = (Any?, x3Core.NotifyEvent?) -> (Swift.Void)
+public typealias ErrorEvent = (Foundation.NSError, Swift.Int, Swift.String) -> (Swift.Void)
+public typealias BoolEvent = (Swift.Bool) -> (Swift.Void)
+public typealias StringEvent = (Swift.String) -> (Swift.Void)
+public typealias IntegerEvent = (Swift.Int) -> (Swift.Void)
+public typealias BoolStringEvent = (Swift.Bool, Swift.String) -> (Swift.Void)
+extension Foundation.NSNotification.Name {
+  public static let settingsChange: Foundation.Notification.Name
+  public static let waitViewShow: Foundation.Notification.Name
+  public static let waitViewHide: Foundation.Notification.Name
+  public static let colorSchemeChange: Foundation.Notification.Name
+  public static let endEditing: Foundation.Notification.Name
+  public static let keyboardStateChange: Foundation.Notification.Name
+}
+extension Swift.String {
+  public func localized(withBundle bundleID: Swift.String = "", withComment comment: Swift.String = "") -> Swift.String
+  public var localized: Swift.String {
+    get
+  }
+  public var html2AttributedString: Foundation.NSMutableAttributedString? {
+    get
+  }
+  public var html2String: Swift.String {
+    get
+  }
+}
+public struct X3Options<EnumType> : Swift.OptionSet where EnumType : Swift.CaseIterable, EnumType : Swift.Hashable {
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init(rawValue: Swift.Int)
+  public init(_ option: EnumType)
+  public init(arrayLiteral elements: EnumType...)
+  public static var all: x3Core.X3Options<EnumType> {
+    get
+  }
+  public var allCombinationsContainingSelf: [x3Core.X3Options<EnumType>] {
+    get
+  }
+  public static func allContaining(_ option: EnumType) -> [x3Core.X3Options<EnumType>]
+  public static func allContaining(_ option: x3Core.X3Options<EnumType>) -> [x3Core.X3Options<EnumType>]
+  public var decomposed: [EnumType] {
+    get
+  }
+  public typealias ArrayLiteralElement = EnumType
+  public typealias Element = x3Core.X3Options<EnumType>
+  public typealias RawValue = Swift.Int
+}
+extension Swift.Int {
+  public var asString: Swift.String? {
+    get
+  }
+  public func asString(groupingSeparator: Swift.String) -> Swift.String?
+}
+public typealias OnDataResult = (x3Core.DataResult, Any?) -> (Swift.Void)
+public typealias OnQueryResult = (Any?) -> (x3Core.DataResult)
+public typealias OnQueryResultEscaping = (Any?, @escaping x3Core.OnDataResult) -> (Swift.Void)
+@objc public protocol DataResultDelegate {
+  @objc optional func DataResult(_ result: Any?)
+  @objc optional func DataResult(_ result: Any?, data: Any?)
+}
+public enum DataResult {
+  case none
+  case success
+  case notifucation(Swift.String)
+  case confirm
+  case error(Swift.Error)
+  case errorText(Swift.String)
+  case abort
+  public var isSuccess: Swift.Bool {
+    get
+  }
+  public var isNotification: Swift.Bool {
+    get
+  }
+  public var isError: Swift.Bool {
+    get
+  }
+  public var isAbort: Swift.Bool {
+    get
+  }
+  public var errorText: Swift.String? {
+    get
+  }
+  public var notificationText: Swift.String? {
+    get
+  }
+}
+public func getErrorResultText(_ value: x3Core.DataResult) -> Swift.String?
+@_hasMissingDesignatedInitializers public class UserFonts {
+  public enum Extension : Swift.String {
+    case ttf
+    case otf
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct Fonts {
+    public struct Ivona {
+      public static let Bold: Swift.String
+      public static let BoldItalic: Swift.String
+      public static let Italic: Swift.String
+      public static let Regular: Swift.String
+      public static let CondBold: Swift.String
+      public static let CondBoldItalic: Swift.String
+      public static let CondItalic: Swift.String
+      public static let CondRegular: Swift.String
+      public static let CondHeavyItalic: Swift.String
+      public static let CondHeavyRegular: Swift.String
+      public static let CondLightItalic: Swift.String
+      public static let CondLightRegular: Swift.String
+      public static let CondMediumItalic: Swift.String
+      public static let CondMediumRegular: Swift.String
+      public static let HeavyItalic: Swift.String
+      public static let HeavyRegular: Swift.String
+      public static let LightItalic: Swift.String
+      public static let LightRegular: Swift.String
+      public static let MediumItalic: Swift.String
+      public static let MediumRegular: Swift.String
+      public static func loadFont(isPrintReport: Swift.Bool = false)
+    }
+    public struct FuturaPT {
+      public static let BoldOblique: Swift.String
+      public static let Bold: Swift.String
+      public static let BookOblique: Swift.String
+      public static let Book: Swift.String
+      public static let CondBoldOblique: Swift.String
+      public static let CondBold: Swift.String
+      public static let CondBookOblique: Swift.String
+      public static let CondBook: Swift.String
+      public static let CondExtraBoldOblique: Swift.String
+      public static let CondExtraBold: Swift.String
+      public static let CondMediumOblique: Swift.String
+      public static let CondMedium: Swift.String
+      public static let DemiOblique: Swift.String
+      public static let Demi: Swift.String
+      public static let ExtraBoldOblique: Swift.String
+      public static let ExtraBold: Swift.String
+      public static let HeavyOblique: Swift.String
+      public static let Heavy: Swift.String
+      public static let LightOblique: Swift.String
+      public static let Light: Swift.String
+      public static let MediumOblique: Swift.String
+      public static let Medium: Swift.String
+      public static func loadFont(isPrintReport: Swift.Bool = false)
+    }
+    public struct OpenSans {
+      public static let Bold: Swift.String
+      public static let BoldItalic: Swift.String
+      public static let ExtraBold: Swift.String
+      public static let ExtraBoldItalic: Swift.String
+      public static let Italic: Swift.String
+      public static let Light: Swift.String
+      public static let LightItalic: Swift.String
+      public static let Regular: Swift.String
+      public static let Semibold: Swift.String
+      public static let SemiboldItalic: Swift.String
+      public static func loadFont(isPrintReport: Swift.Bool = false)
+    }
+    public struct CoreSansG {
+      public static let ExtraLight: Swift.String
+      public static let Light: Swift.String
+      public static let Medium: Swift.String
+      public static let Regular: Swift.String
+      public static func loadFont(isPrintReport: Swift.Bool = false)
+    }
+    public struct BasisGrotesquePro {
+      public static let Black: Swift.String
+      public static let BlackItalic: Swift.String
+      public static let Bold: Swift.String
+      public static let BoldItalic: Swift.String
+      public static let Italic: Swift.String
+      public static let Light: Swift.String
+      public static let LightItalic: Swift.String
+      public static let Medium: Swift.String
+      public static let MediumItalic: Swift.String
+      public static let Mono: Swift.String
+      public static let MonoBold: Swift.String
+      public static let MonoBoldItalic: Swift.String
+      public static let MonoItalic: Swift.String
+      public static let OffWhite: Swift.String
+      public static let OffWhiteItalic: Swift.String
+      public static let Regular: Swift.String
+      public static let RegularItalic: Swift.String
+      public static func loadFont(isPrintReport: Swift.Bool = false)
+    }
+    public struct NotoSans {
+      public static let Black: Swift.String
+      public static let BlackItalic: Swift.String
+      public static let Bold: Swift.String
+      public static let BoldItalic: Swift.String
+      public static let Condensed: Swift.String
+      public static let CondensedBlack: Swift.String
+      public static let CondensedBlackItalic: Swift.String
+      public static let CondensedBold: Swift.String
+      public static let CondensedBoldItalic: Swift.String
+      public static let CondensedExtraBold: Swift.String
+      public static let CondensedExtraBoldItalic: Swift.String
+      public static let CondensedExtraLight: Swift.String
+      public static let CondensedExtraLightItalic: Swift.String
+      public static let CondensedItalic: Swift.String
+      public static let CondensedLight: Swift.String
+      public static let CondensedLightItalic: Swift.String
+      public static let CondensedMedium: Swift.String
+      public static let CondensedMediumItalic: Swift.String
+      public static let CondensedSemiBold: Swift.String
+      public static let CondensedSemiBoldItalic: Swift.String
+      public static let CondensedThin: Swift.String
+      public static let CondensedThinItalic: Swift.String
+      public static let ExtraBold: Swift.String
+      public static let ExtraBoldItalic: Swift.String
+      public static let ExtraCondensed: Swift.String
+      public static let ExtraCondensedBlack: Swift.String
+      public static let ExtraCondensedBlackItalic: Swift.String
+      public static let ExtraCondensedBold: Swift.String
+      public static let ExtraCondensedBoldItalic: Swift.String
+      public static let ExtraCondensedExtraBold: Swift.String
+      public static let ExtraCondensedExtraBoldItalic: Swift.String
+      public static let ExtraCondensedExtraLight: Swift.String
+      public static let ExtraCondensedExtraLightItalic: Swift.String
+      public static let ExtraCondensedItalic: Swift.String
+      public static let ExtraCondensedLight: Swift.String
+      public static let ExtraCondensedLightItalic: Swift.String
+      public static let ExtraCondensedMedium: Swift.String
+      public static let ExtraCondensedMediumItalic: Swift.String
+      public static let ExtraCondensedSemiBold: Swift.String
+      public static let ExtraCondensedSemiBoldItalic: Swift.String
+      public static let ExtraCondensedThin: Swift.String
+      public static let ExtraCondensedThinItalic: Swift.String
+      public static let ExtraLight: Swift.String
+      public static let ExtraLightItalic: Swift.String
+      public static let Italic: Swift.String
+      public static let Light: Swift.String
+      public static let LightItalic: Swift.String
+      public static let Medium: Swift.String
+      public static let MediumItalic: Swift.String
+      public static let Regular: Swift.String
+      public static let SemiBold: Swift.String
+      public static let SemiBoldItalic: Swift.String
+      public static let SemiCondensed: Swift.String
+      public static let SemiCondensedBlack: Swift.String
+      public static let SemiCondensedBlackItalic: Swift.String
+      public static let SemiCondensedBold: Swift.String
+      public static let SemiCondensedBoldItalic: Swift.String
+      public static let SemiCondensedExtraBold: Swift.String
+      public static let SemiCondensedExtraBoldItalic: Swift.String
+      public static let SemiCondensedExtraLight: Swift.String
+      public static let SemiCondensedExtraLightItalic: Swift.String
+      public static let SemiCondensedItalic: Swift.String
+      public static let SemiCondensedLight: Swift.String
+      public static let SemiCondensedLightItalic: Swift.String
+      public static let SemiCondensedMedium: Swift.String
+      public static let SemiCondensedMediumItalic: Swift.String
+      public static let SemiCondensedSemiBold: Swift.String
+      public static let SemiCondensedSemiBoldItalic: Swift.String
+      public static let SemiCondensedThin: Swift.String
+      public static let SemiCondensedThinItalic: Swift.String
+      public static let Thin: Swift.String
+      public static let ThinItalic: Swift.String
+      public static func loadFont(isPrintReport: Swift.Bool = false)
+    }
+  }
+  public static func initialize(isPrintReport: Swift.Bool = false)
+  public static func loadFont(_ fontName: Swift.String, withExtension: x3Core.UserFonts.Extension, isPrintReport: Swift.Bool = false)
+  @objc deinit
+}
+public protocol Option : Swift.CaseIterable, Swift.Hashable, Swift.RawRepresentable {
+}
+extension Swift.Set where Element : x3Core.Option {
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension x3Core.UserFonts.Extension : Swift.Equatable {}
+extension x3Core.UserFonts.Extension : Swift.Hashable {}
+extension x3Core.UserFonts.Extension : Swift.RawRepresentable {}
