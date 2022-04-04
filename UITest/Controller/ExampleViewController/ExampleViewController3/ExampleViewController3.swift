@@ -173,7 +173,7 @@ class ExampleViewController3: UIX3CustomViewController {
     public override func setupView() {
         super.setupView()
         self.view.backgroundColor = Config.Colors.panelBackground
-
+        
     }
 
     override func keyboardEvent(duration: Double, options: UIView.AnimationOptions, bottomPosition: CGFloat) {
@@ -186,6 +186,8 @@ class ExampleViewController3: UIX3CustomViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
+    
+    
     @objc private func handleActionButtonClick() {
         self.view.endEditing(true)
     }
@@ -196,7 +198,7 @@ extension ExampleViewController3: UX3TextControlDelegate {
 //        print("UX3TextFieldTextChange = \((sender as? UX3CustomInput)?.text ?? "<?>")")
     }
     func UX3TextControlLeftButtonClick(_ sender: Any?) {
-
+        
     }
     func UX3TextControlRightButtonClick(_ sender: Any?) {
 //        self.view.endEditing(true)

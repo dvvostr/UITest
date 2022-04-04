@@ -9,9 +9,9 @@ import UIKit
         (1, "Buttons", Config.Images.IMAGE_ICONDOC),
         (2, "GUI", Config.Images.IMAGE_ICONUSER),
         (3, "Input Form", Config.Images.IMAGE_ICONADD),
-        (4, "Test", Config.Images.IMAGE_ICONBAG),
+        (4, "Data", Config.Images.IMAGE_ICONBAG),
         (5, "Alerts", Config.Images.IMAGE_ICONBOX),
-        (6, "Example 6", Config.Images.IMAGE_ICONAB),
+        (6, "TableView & Custom view", Config.Images.IMAGE_ICONAB),
         (7, "Example 7", Config.Images.IMAGE_ICONPIN),
         (8, "Example 8", Config.Images.IMAGE_ICONUSER),
         (9, "Change PIN", Config.Images.IMAGE_ICONLOCK)
@@ -71,8 +71,8 @@ extension HomeViewController: UICustomHomeControllerTableCellDelegate {
         case 3: _class = ExampleViewController3.self
         case 4: _class = ExampleViewController4.self
         case 5: _class = ExampleViewController5.self
-        case 6: break
-        case 7: break
+        case 6: _class = ExampleViewController6.self
+        case 7: _class = ExampleViewController7.self
         case 8: break
         case 9: _class = ProfileDetailViewController.self
         default: self.showAlert(title: "Error", message: "Unknown action type", buttonTitle: "OK")

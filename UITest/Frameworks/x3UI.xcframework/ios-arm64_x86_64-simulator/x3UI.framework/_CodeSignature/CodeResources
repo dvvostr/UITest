@@ -351,7 +351,7 @@
 		</data>
 		<key>Headers/x3UI-Swift.h</key>
 		<data>
-		KKYnNtB1QGYA//ATmR+2teIBPhE=
+		wl9/EyXWKK+5INes+ZN3IpaGy04=
 		</data>
 		<key>Headers/x3UI.h</key>
 		<data>
@@ -367,27 +367,27 @@
 		</data>
 		<key>Modules/x3UI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		JNmX3C8xKl8WXMdcJZnYiF9ngz4=
+		flXTOkrZDwdIvHCo582xQihMwag=
 		</data>
 		<key>Modules/x3UI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mPP0X9szDWEPiXN9aPDj7R8yYUI=
+		xEsLfxanU8qInToH2inS8PDN7BQ=
 		</data>
 		<key>Modules/x3UI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+Ghd0Hawe9Nw+vK8ZsK8lguCMM0=
+		x9D4/RuH4SXc5+iAG0lBFc73Dtk=
 		</data>
 		<key>Modules/x3UI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		vwN24jS1GdOTsSZV2SHVqAbsDrc=
+		bb+DLCvc/2cORGS8wlmqMlJAL30=
 		</data>
 		<key>Modules/x3UI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		lp85fp5CmTnnSFa1p6CDMDNYH3s=
+		fDrBQ7NYrMLQJEcedK1t6daY7kc=
 		</data>
 		<key>Modules/x3UI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		CQiB/MG4QCJ0o8bDTst4NBqSTzo=
+		QUYh2Mxw/9Df0h7ue6hGI5Jy/Fs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -993,7 +993,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aHRMtcphoky8RLVtcba4y8Il4wtR6W8/SWQf7eDwJ5w=
+			GdbxEgoUAnrgabpa3m6Brf+V8NBIxqsFXrPweaSQZCo=
 			</data>
 		</dict>
 		<key>Headers/x3UI.h</key>
@@ -1014,42 +1014,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WqjjzVhxzQNvHSRtdYJoGVa79OIbKclc8dhTf9nrIEM=
+			FDa0+NceC16GvxoZ3uRDoI+mOQKUJHtEDZJJPwwMgd0=
 			</data>
 		</dict>
 		<key>Modules/x3UI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oi9143MNrPEq709AYXjIcJM6PgogTjZyKLKpluhkjiA=
+			/8r1zj2JCiP+x+gqKqXTx2jv+9ONwMVpIkb0aeq5DPk=
 			</data>
 		</dict>
 		<key>Modules/x3UI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vaXjNJoDrKA9ypsn5OPgcI/6nJhAWpk2DFCjvbBws4c=
+			tJ3QYEBuQkQzn0fVL3SPxUyoENLkxWsqbzJj1/9YFNU=
 			</data>
 		</dict>
 		<key>Modules/x3UI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FNqATsPrj2z8oHbVU0G/MMBQ2VSevY6adb8cAdgzKKo=
+			sR0Ypi4hJ1v7Tl66CBPV4n7y/sKHhg3L8bOL8hXkUvE=
 			</data>
 		</dict>
 		<key>Modules/x3UI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			apAKB5S/6fIvw3tUaLUgCLTRHMZwndwOjkbc0fQVbyM=
+			gW0dBwsuSIu0Ve2oSg9xU2DZJdXyZmttg04Sm8a4MSY=
 			</data>
 		</dict>
 		<key>Modules/x3UI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ILcL9+zHw7+pXYx3dzZvuIozwd/GpqVRmy6JTVqzP2k=
+			ovEJ/qSt2j4o+v+vVfH2RQDRGDk8Ji0fjKR05IRFR34=
 			</data>
 		</dict>
 	</dict>

@@ -1,3 +1,10 @@
+//
+//  SceneDelegate.swift
+//  Transportation
+//
+//  Created by Дмитрий Востриков on 29.01.2022.
+//
+
 import UIKit
 
 class SceneDelegate: UICustomResponder, UIWindowSceneDelegate {

@@ -234,12 +234,51 @@ SWIFT_PROTOCOL("_TtP4x3UI20ControlEventDelegate_")
 - (void)controlEvent:(id _Nullable)sender event:(id _Nullable)event;
 @end
 
+
+SWIFT_CLASS("_TtC4x3UI16CustomDataResult")
+@interface CustomDataResult : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSString;
+
+SWIFT_CLASS("_TtC4x3UI23CustomTableViewDataItem")
+@interface CustomTableViewDataItem : CustomDataResult
+@property (nonatomic, copy) NSString * _Nonnull code;
+@property (nonatomic, copy) NSString * _Nonnull caption;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI25CustomTableViewDataResult")
+@interface CustomTableViewDataResult : CustomDataResult
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI26CustomTableViewDataSection")
+@interface CustomTableViewDataSection : CustomDataResult
+@property (nonatomic, copy) NSString * _Nonnull code;
+@property (nonatomic, copy) NSString * _Nonnull caption;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class NSLayoutConstraint;
 
 @interface NSLayoutAnchor<AnchorType> (SWIFT_EXTENSION(x3UI))
 - (NSLayoutConstraint * _Nonnull)constraintWithEqualTo:(NSLayoutAnchor<AnchorType> * _Nonnull)anchor constant:(CGFloat)c isActive:(BOOL)isActive SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+
+SWIFT_CLASS("_TtC4x3UI18ResponseDataResult")
+@interface ResponseDataResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 @class Drawing;
 @class Animating;
@@ -351,7 +390,6 @@ SWIFT_CLASS("_TtCC4x3UI18ToolTipPreferences9Animating")
 
 
 
-@class NSString;
 enum ArrowPosition : NSInteger;
 @protocol UIX3ToolTipDelegate;
 
@@ -434,8 +472,8 @@ SWIFT_CLASS("_TtC4x3UI12UIViewBorder")
 @class NSBundle;
 
 IB_DESIGNABLE
-SWIFT_CLASS("_TtC4x3UI23UIX3AlertViewController")
-@interface UIX3AlertViewController : UIViewController
+SWIFT_CLASS("_TtC4x3UI29UIX3CustomAlertViewController")
+@interface UIX3CustomAlertViewController : UIViewController
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -444,13 +482,20 @@ SWIFT_CLASS("_TtC4x3UI23UIX3AlertViewController")
 - (void)dismissAlertView;
 @end
 
-@class UX3CustomButton;
 
-SWIFT_PROTOCOL("_TtP4x3UI31UIX3AlertViewControllerDelegate_")
-@protocol UIX3AlertViewControllerDelegate
-@optional
-- (void)alertViewWithSender:(UIX3AlertViewController * _Nonnull)sender buttonType:(NSInteger)buttonType buttonCreate:(UX3CustomButton * _Nullable)buttonCreate;
-- (void)alertViewWithSender:(UIX3AlertViewController * _Nonnull)sender buttonType:(NSInteger)buttonType buttonClick:(UX3CustomButton * _Nullable)buttonClick;
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI23UIX3AlertViewController")
+@interface UIX3AlertViewController : UIX3CustomAlertViewController
+- (void)viewDidLayoutSubviews;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI30UIX3AlertWrapperViewController")
+@interface UIX3AlertWrapperViewController : UIX3CustomAlertViewController
+- (void)viewDidLayoutSubviews;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -512,6 +557,16 @@ SWIFT_CLASS("_TtC4x3UI15UIX3CaptionView")
 @end
 
 
+@class UX3CustomButton;
+
+SWIFT_PROTOCOL("_TtP4x3UI37UIX3CustomAlertViewControllerDelegate_")
+@protocol UIX3CustomAlertViewControllerDelegate
+@optional
+- (void)alertViewWithSender:(UIX3CustomAlertViewController * _Nonnull)sender buttonType:(NSInteger)buttonType buttonCreate:(UX3CustomButton * _Nullable)buttonCreate;
+- (void)alertViewWithSender:(UIX3CustomAlertViewController * _Nonnull)sender buttonClickType:(NSInteger)buttonClickType;
+@end
+
+
 IB_DESIGNABLE
 SWIFT_CLASS("_TtC4x3UI20UIX3CustomBorderView")
 @interface UIX3CustomBorderView : UIView
@@ -528,6 +583,13 @@ SWIFT_CLASS("_TtC4x3UI22UIX3CustomBorderedView")
 @property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI31UIX3CustomTableHeaderFooterView")
+@interface UIX3CustomTableHeaderFooterView : UITableViewHeaderFooterView
+- (nonnull instancetype)initWithReuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -559,6 +621,24 @@ SWIFT_PROTOCOL("_TtP4x3UI32UIX3CustomViewControllerDelegate_")
 - (void)customViewControllerWithSender:(UIX3CustomViewController * _Nonnull)sender keyboardTopPosition:(CGFloat)keyboardTopPosition duration:(double)duration options:(id _Nullable)options;
 - (void)customViewControllerWithSender:(UIX3CustomViewController * _Nonnull)sender statusBarStyle:(UIStatusBarStyle)statusBarStyle;
 - (void)customViewControllerWithSender:(UIX3CustomViewController * _Nonnull)sender orientation:(UIDeviceOrientation)orientation isLandscape:(BOOL)isLandscape;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI13UIX3Inspector")
+@interface UIX3Inspector : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI27UIX3ModalCardViewController")
+@interface UIX3ModalCardViewController : UIViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
 @end
 
 @class NSTextContainer;
@@ -603,6 +683,23 @@ SWIFT_CLASS("_TtC4x3UI22UIX3MultilineTextField")
 - (void)willMoveToSuperview:(UIView * _Nullable)newSuperview;
 @end
 
+
+SWIFT_CLASS("_TtC4x3UI10UIX3Pinpad")
+@interface UIX3Pinpad : UIX3CustomView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI24UIX3PinpadViewController")
+@interface UIX3PinpadViewController : UIX3CustomViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
+@end
+
 @class UIGestureRecognizer;
 
 SWIFT_CLASS("_TtC4x3UI18UIX3SegmentControl")
@@ -617,6 +714,63 @@ SWIFT_CLASS("_TtC4x3UI18UIX3SegmentControl")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithItems:(NSArray * _Nullable)items OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI13UIX3TableView")
+@interface UIX3TableView : UITableView
+- (nonnull instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) CustomTableViewDataResult * _Nullable items;
+- (void)reloadData;
+@end
+
+
+@class NSIndexPath;
+@class UITableViewCell;
+
+@interface UIX3TableView (SWIFT_EXTENSION(x3UI)) <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI23UIX3TableViewCustomCell")
+@interface UIX3TableViewCustomCell : UITableViewCell
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)awakeFromNib;
+@end
+
+
+SWIFT_PROTOCOL("_TtP4x3UI31UIX3TableViewCustomCellDelegate_")
+@protocol UIX3TableViewCustomCellDelegate
+@optional
+- (void)customCellChangeWithSender:(id _Nullable)sender data:(id _Nullable)data;
+- (void)customCellCancelWithSender:(id _Nullable)sender;
+- (void)customCellSelectedChangeWithSender:(id _Nonnull)sender;
+- (void)customCellPopupChangeWithSender:(id _Nullable)sender;
+@end
+
+
+SWIFT_PROTOCOL("_TtP4x3UI21UIX3TableViewDelegate_")
+@protocol UIX3TableViewDelegate
+@optional
+- (void)tableViewWithSetupFor:(UIX3TableView * _Nonnull)tableView;
+- (NSInteger)tableViewWithNumberOfSectionsOf:(UIX3TableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UIX3TableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (SWIFT_METATYPE(UITableViewCell) _Nonnull)tableView:(UIX3TableView * _Nonnull)tableView rowForSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UIX3TableView * _Nonnull)tableView heightForTableRowAt:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UIX3TableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath tableCellDidLoad:(UITableViewCell * _Nullable)cell;
+- (SWIFT_METATYPE(UIX3CustomTableHeaderFooterView) _Nonnull)tableViewWithHeaderViewFor:(UIX3TableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UIX3TableView * _Nonnull)tableView heightForTableHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UIX3TableView * _Nonnull)tableView section:(NSInteger)section tableHeaderDidLoad:(UIView * _Nullable)view;
+- (void)tableView:(UIX3TableView * _Nonnull)tableView items:(CustomTableViewDataResult * _Nullable)items;
 @end
 
 
@@ -665,6 +819,18 @@ SWIFT_PROTOCOL("_TtP4x3UI19UIX3ToolTipDelegate_")
 @protocol UIX3ToolTipDelegate
 - (void)toolTipViewDidAppearFor:(NSString * _Nonnull)identifier;
 - (void)toolTipViewDidDisappearFor:(NSString * _Nonnull)identifier with:(NSTimeInterval)timeInterval;
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI22UIX3WaitViewController")
+@interface UIX3WaitViewController : UIViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
+- (void)dismissAlertView;
 @end
 
 
@@ -980,12 +1146,51 @@ SWIFT_PROTOCOL("_TtP4x3UI20ControlEventDelegate_")
 - (void)controlEvent:(id _Nullable)sender event:(id _Nullable)event;
 @end
 
+
+SWIFT_CLASS("_TtC4x3UI16CustomDataResult")
+@interface CustomDataResult : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSString;
+
+SWIFT_CLASS("_TtC4x3UI23CustomTableViewDataItem")
+@interface CustomTableViewDataItem : CustomDataResult
+@property (nonatomic, copy) NSString * _Nonnull code;
+@property (nonatomic, copy) NSString * _Nonnull caption;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI25CustomTableViewDataResult")
+@interface CustomTableViewDataResult : CustomDataResult
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI26CustomTableViewDataSection")
+@interface CustomTableViewDataSection : CustomDataResult
+@property (nonatomic, copy) NSString * _Nonnull code;
+@property (nonatomic, copy) NSString * _Nonnull caption;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class NSLayoutConstraint;
 
 @interface NSLayoutAnchor<AnchorType> (SWIFT_EXTENSION(x3UI))
 - (NSLayoutConstraint * _Nonnull)constraintWithEqualTo:(NSLayoutAnchor<AnchorType> * _Nonnull)anchor constant:(CGFloat)c isActive:(BOOL)isActive SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+
+SWIFT_CLASS("_TtC4x3UI18ResponseDataResult")
+@interface ResponseDataResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 @class Drawing;
 @class Animating;
@@ -1097,7 +1302,6 @@ SWIFT_CLASS("_TtCC4x3UI18ToolTipPreferences9Animating")
 
 
 
-@class NSString;
 enum ArrowPosition : NSInteger;
 @protocol UIX3ToolTipDelegate;
 
@@ -1180,8 +1384,8 @@ SWIFT_CLASS("_TtC4x3UI12UIViewBorder")
 @class NSBundle;
 
 IB_DESIGNABLE
-SWIFT_CLASS("_TtC4x3UI23UIX3AlertViewController")
-@interface UIX3AlertViewController : UIViewController
+SWIFT_CLASS("_TtC4x3UI29UIX3CustomAlertViewController")
+@interface UIX3CustomAlertViewController : UIViewController
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -1190,13 +1394,20 @@ SWIFT_CLASS("_TtC4x3UI23UIX3AlertViewController")
 - (void)dismissAlertView;
 @end
 
-@class UX3CustomButton;
 
-SWIFT_PROTOCOL("_TtP4x3UI31UIX3AlertViewControllerDelegate_")
-@protocol UIX3AlertViewControllerDelegate
-@optional
-- (void)alertViewWithSender:(UIX3AlertViewController * _Nonnull)sender buttonType:(NSInteger)buttonType buttonCreate:(UX3CustomButton * _Nullable)buttonCreate;
-- (void)alertViewWithSender:(UIX3AlertViewController * _Nonnull)sender buttonType:(NSInteger)buttonType buttonClick:(UX3CustomButton * _Nullable)buttonClick;
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI23UIX3AlertViewController")
+@interface UIX3AlertViewController : UIX3CustomAlertViewController
+- (void)viewDidLayoutSubviews;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI30UIX3AlertWrapperViewController")
+@interface UIX3AlertWrapperViewController : UIX3CustomAlertViewController
+- (void)viewDidLayoutSubviews;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1258,6 +1469,16 @@ SWIFT_CLASS("_TtC4x3UI15UIX3CaptionView")
 @end
 
 
+@class UX3CustomButton;
+
+SWIFT_PROTOCOL("_TtP4x3UI37UIX3CustomAlertViewControllerDelegate_")
+@protocol UIX3CustomAlertViewControllerDelegate
+@optional
+- (void)alertViewWithSender:(UIX3CustomAlertViewController * _Nonnull)sender buttonType:(NSInteger)buttonType buttonCreate:(UX3CustomButton * _Nullable)buttonCreate;
+- (void)alertViewWithSender:(UIX3CustomAlertViewController * _Nonnull)sender buttonClickType:(NSInteger)buttonClickType;
+@end
+
+
 IB_DESIGNABLE
 SWIFT_CLASS("_TtC4x3UI20UIX3CustomBorderView")
 @interface UIX3CustomBorderView : UIView
@@ -1274,6 +1495,13 @@ SWIFT_CLASS("_TtC4x3UI22UIX3CustomBorderedView")
 @property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI31UIX3CustomTableHeaderFooterView")
+@interface UIX3CustomTableHeaderFooterView : UITableViewHeaderFooterView
+- (nonnull instancetype)initWithReuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1305,6 +1533,24 @@ SWIFT_PROTOCOL("_TtP4x3UI32UIX3CustomViewControllerDelegate_")
 - (void)customViewControllerWithSender:(UIX3CustomViewController * _Nonnull)sender keyboardTopPosition:(CGFloat)keyboardTopPosition duration:(double)duration options:(id _Nullable)options;
 - (void)customViewControllerWithSender:(UIX3CustomViewController * _Nonnull)sender statusBarStyle:(UIStatusBarStyle)statusBarStyle;
 - (void)customViewControllerWithSender:(UIX3CustomViewController * _Nonnull)sender orientation:(UIDeviceOrientation)orientation isLandscape:(BOOL)isLandscape;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI13UIX3Inspector")
+@interface UIX3Inspector : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI27UIX3ModalCardViewController")
+@interface UIX3ModalCardViewController : UIViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
 @end
 
 @class NSTextContainer;
@@ -1349,6 +1595,23 @@ SWIFT_CLASS("_TtC4x3UI22UIX3MultilineTextField")
 - (void)willMoveToSuperview:(UIView * _Nullable)newSuperview;
 @end
 
+
+SWIFT_CLASS("_TtC4x3UI10UIX3Pinpad")
+@interface UIX3Pinpad : UIX3CustomView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI24UIX3PinpadViewController")
+@interface UIX3PinpadViewController : UIX3CustomViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
+@end
+
 @class UIGestureRecognizer;
 
 SWIFT_CLASS("_TtC4x3UI18UIX3SegmentControl")
@@ -1363,6 +1626,63 @@ SWIFT_CLASS("_TtC4x3UI18UIX3SegmentControl")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithItems:(NSArray * _Nullable)items OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI13UIX3TableView")
+@interface UIX3TableView : UITableView
+- (nonnull instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) CustomTableViewDataResult * _Nullable items;
+- (void)reloadData;
+@end
+
+
+@class NSIndexPath;
+@class UITableViewCell;
+
+@interface UIX3TableView (SWIFT_EXTENSION(x3UI)) <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC4x3UI23UIX3TableViewCustomCell")
+@interface UIX3TableViewCustomCell : UITableViewCell
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)awakeFromNib;
+@end
+
+
+SWIFT_PROTOCOL("_TtP4x3UI31UIX3TableViewCustomCellDelegate_")
+@protocol UIX3TableViewCustomCellDelegate
+@optional
+- (void)customCellChangeWithSender:(id _Nullable)sender data:(id _Nullable)data;
+- (void)customCellCancelWithSender:(id _Nullable)sender;
+- (void)customCellSelectedChangeWithSender:(id _Nonnull)sender;
+- (void)customCellPopupChangeWithSender:(id _Nullable)sender;
+@end
+
+
+SWIFT_PROTOCOL("_TtP4x3UI21UIX3TableViewDelegate_")
+@protocol UIX3TableViewDelegate
+@optional
+- (void)tableViewWithSetupFor:(UIX3TableView * _Nonnull)tableView;
+- (NSInteger)tableViewWithNumberOfSectionsOf:(UIX3TableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UIX3TableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (SWIFT_METATYPE(UITableViewCell) _Nonnull)tableView:(UIX3TableView * _Nonnull)tableView rowForSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UIX3TableView * _Nonnull)tableView heightForTableRowAt:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UIX3TableView * _Nonnull)tableView indexPath:(NSIndexPath * _Nonnull)indexPath tableCellDidLoad:(UITableViewCell * _Nullable)cell;
+- (SWIFT_METATYPE(UIX3CustomTableHeaderFooterView) _Nonnull)tableViewWithHeaderViewFor:(UIX3TableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UIX3TableView * _Nonnull)tableView heightForTableHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UIX3TableView * _Nonnull)tableView section:(NSInteger)section tableHeaderDidLoad:(UIView * _Nullable)view;
+- (void)tableView:(UIX3TableView * _Nonnull)tableView items:(CustomTableViewDataResult * _Nullable)items;
 @end
 
 
@@ -1411,6 +1731,18 @@ SWIFT_PROTOCOL("_TtP4x3UI19UIX3ToolTipDelegate_")
 @protocol UIX3ToolTipDelegate
 - (void)toolTipViewDidAppearFor:(NSString * _Nonnull)identifier;
 - (void)toolTipViewDidDisappearFor:(NSString * _Nonnull)identifier with:(NSTimeInterval)timeInterval;
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC4x3UI22UIX3WaitViewController")
+@interface UIX3WaitViewController : UIViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
+- (void)dismissAlertView;
 @end
 
 

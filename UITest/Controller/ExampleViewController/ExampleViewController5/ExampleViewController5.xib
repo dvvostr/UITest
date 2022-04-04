@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleViewController5" customModule="Transportation" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleViewController5" customModule="UITest" customModuleProvider="target">
             <connections>
                 <outlet property="button1" destination="T0w-5N-Zao" id="Dz2-9N-vQQ"/>
                 <outlet property="button2" destination="hSW-oR-Wgu" id="c1v-Iq-cRG"/>
                 <outlet property="button3" destination="pSB-71-ZuB" id="VS4-Z3-0QN"/>
                 <outlet property="button4" destination="5d9-ME-LBq" id="70C-ZS-stK"/>
+                <outlet property="button5" destination="x2s-HR-5Yx" id="G1S-Li-Ulv"/>
+                <outlet property="button6" destination="2Ox-3F-6h2" id="i1c-Ky-10W"/>
                 <outlet property="buttonCancel" destination="Rwy-XT-NJM" id="4b8-HL-vC0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -54,8 +56,18 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button"/>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2s-HR-5Yx" userLabel="Button 5" customClass="UX3CustomButton" customModule="x3UI">
+                                    <rect key="frame" x="157" y="372" width="46" height="30"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwy-XT-NJM" userLabel="Button Cancel" customClass="UX3CustomButton" customModule="x3UI">
                                     <rect key="frame" x="157" y="1150" width="46" height="30"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ox-3F-6h2" userLabel="Button 5" customClass="UX3CustomButton" customModule="x3UI">
+                                    <rect key="frame" x="157" y="452" width="46" height="30"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button"/>
                                 </button>
@@ -64,11 +76,15 @@
                             <constraints>
                                 <constraint firstItem="Rwy-XT-NJM" firstAttribute="centerX" secondItem="f0c-ay-buz" secondAttribute="centerX" id="2My-bM-YbM"/>
                                 <constraint firstAttribute="bottom" secondItem="Rwy-XT-NJM" secondAttribute="bottom" constant="20" id="3ju-i7-P6B"/>
+                                <constraint firstItem="x2s-HR-5Yx" firstAttribute="top" secondItem="5d9-ME-LBq" secondAttribute="bottom" constant="50" id="3uv-ia-TMq"/>
+                                <constraint firstItem="x2s-HR-5Yx" firstAttribute="centerX" secondItem="f0c-ay-buz" secondAttribute="centerX" id="6ZR-Ej-p5f"/>
                                 <constraint firstItem="hSW-oR-Wgu" firstAttribute="height" secondItem="T0w-5N-Zao" secondAttribute="height" id="A18-hv-cx4"/>
                                 <constraint firstItem="hSW-oR-Wgu" firstAttribute="top" secondItem="T0w-5N-Zao" secondAttribute="bottom" constant="50" id="CBu-kV-gR0"/>
                                 <constraint firstItem="pSB-71-ZuB" firstAttribute="centerX" secondItem="f0c-ay-buz" secondAttribute="centerX" id="HoW-W8-0Hc"/>
                                 <constraint firstItem="5d9-ME-LBq" firstAttribute="top" secondItem="pSB-71-ZuB" secondAttribute="bottom" constant="50" id="M54-n9-uYM"/>
                                 <constraint firstAttribute="height" constant="1200" id="PMn-c0-QVv"/>
+                                <constraint firstItem="2Ox-3F-6h2" firstAttribute="centerX" secondItem="f0c-ay-buz" secondAttribute="centerX" id="VVm-at-H8F"/>
+                                <constraint firstItem="2Ox-3F-6h2" firstAttribute="top" secondItem="x2s-HR-5Yx" secondAttribute="bottom" constant="50" id="XC6-Ho-a3w"/>
                                 <constraint firstItem="pSB-71-ZuB" firstAttribute="top" secondItem="hSW-oR-Wgu" secondAttribute="bottom" constant="50" id="YT4-Jl-dOs"/>
                                 <constraint firstItem="5d9-ME-LBq" firstAttribute="centerX" secondItem="f0c-ay-buz" secondAttribute="centerX" id="aW0-ra-sdF"/>
                                 <constraint firstItem="T0w-5N-Zao" firstAttribute="centerX" secondItem="f0c-ay-buz" secondAttribute="centerX" id="azF-Ug-Wfy"/>
@@ -102,6 +118,9 @@
         </view>
     </objects>
     <designables>
+        <designable name="2Ox-3F-6h2">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
         <designable name="5d9-ME-LBq">
             <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
@@ -115,6 +134,9 @@
             <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
         <designable name="pSB-71-ZuB">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="x2s-HR-5Yx">
             <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
     </designables>

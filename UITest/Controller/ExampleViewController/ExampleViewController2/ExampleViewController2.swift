@@ -102,7 +102,7 @@ import x3CustomUI1
             super.captionText = self.title?.replacingOccurrences(of: "\n", with: " ") ?? ""
         } else {
             let _str = self.title ?? "",
-                _attrStr = NSMutableAttributedString(string: _str, attributes: [NSAttributedString.Key.font: Config.Fonts.NotoSansSemiBold(size: 16) ?? UIFont.systemFont(ofSize: 16)])
+                _attrStr = NSMutableAttributedString(string: _str, attributes: [NSAttributedString.Key.font: Config.Fonts.NotoSansSemiBold(size: 16)!])
             let _sep = (_str as NSString).range(of: "\n")
             if _sep.location > 0 {
                 let _start = _sep.location + _sep.length
