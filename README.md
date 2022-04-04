@@ -14,7 +14,7 @@
 <p>&nbsp;</p>
 <h3>Buttons&nbsp;<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/ExampleViewController/ExampleViewController1">-></a></h3>
 <p>Example buttons</p>
-<h3>GUI</h3>
+<h3>GUI&nbsp;<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/ExampleViewController/ExampleViewController2">-></a></h3>
 <p>Example some UI controls</p>
 <ul>
   <li>Custom navigation bar</li>
@@ -24,11 +24,11 @@
   <li>Segment indicator</li>
   <li>Checkbox</li>
 </ul>
-<h3>Input form</h3>
+<h3>Input form&nbsp;<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/ExampleViewController/ExampleViewController3">-></a></h3>
 <p>Example custom <i>UITextField</i> and <i>UITextView</i> with custom "clear" buttom, "action" button and placeholder</p>
-<h3>Data</h3>
+<h3>Data&nbsp;<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/ExampleViewController/ExampleViewController4">-></a></h3>
 <p>Example to load UITableView with Alamofire</p>
-<h3>Alerts</h3>
+<h3>Alerts&nbsp;<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/ExampleViewController/ExampleViewController5">-></a></h3>
 <p>Example custom alert contoller</p>
 <ul>
   <li>Alert view with string message</li>
@@ -37,7 +37,7 @@
   <li>Wait dialog</li>
   <li>Modal card view controller(like UISheetPresentationController)</li>
 </ul>
-<h3>Table view &#38; Custom view</h3>
+<h3>Table view &#38; Custom view&nbsp;<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/ExampleViewController/ExampleViewController6">-></a></h3>
 <p>Example load UITableView with Alamofire and custom view samples</p>
 <p class="red"><i>Under construction</i></p>
 <h3>Example 7</h3>
