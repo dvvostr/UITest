@@ -1,4 +1,6 @@
 <h2>Alerts</h2>
+<p>Example custom alert contoller</p>
+<p>&nbsp</p>
 <img src="https://user-images.githubusercontent.com/7234356/161582487-3d13df89-fb1f-4fd0-a88e-1323992c8bf6.png" width="360">
 <h4>String message</h4>
 <img src="https://user-images.githubusercontent.com/7234356/161582974-e1de149d-7cfd-486d-aeb8-0c783e525d7b.png" width="250">
