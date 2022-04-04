@@ -44,7 +44,7 @@
 <p>Empty</p>
 <h3>Example 8</h3>
 <p>Empty</p>
-<h3>Change PIN 7<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/Security/ProfileDetailViewController">-></a></h3>
+<h3>Change PIN&nbsp;<a href="https://github.com/dvvostr/UITest/tree/main/UITest/Controller/Security/ProfileDetailViewController">-></a></h3>
 <p>Change PIN dialog sample</p>
 
 <p>&nbsp;</p>
