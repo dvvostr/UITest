@@ -1,5 +1,3 @@
-TEST
-TEST
-<h2>AAAAAA</h2>
-TEST
-TEST
+<h2>Buttons example</h2>
+<img src="https://dvostr.ru/assets/img/screenshorts/img_01-02.png" width="360">
+
